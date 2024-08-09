@@ -1,19 +1,40 @@
-<div>
-  <div>
-    <h2>Login</h2>
-  </div>
-  <form id="login-form">
-    <div>
-      <label for="username-input-login">Username</label>
-      <input type="text" id="username-input-login" />
+<div class="container" id="container">
+    <div class="form-container sign-up-container">
+        <form action="#" id="signup-form">
+            <h1>Create Account</h1>
+           
+            <span>Placeholder Text Here</span>
+            <input type="text" placeholder="Username" id="username-input-signup" />           
+            <input type="password" placeholder="Password" id="password-input-signup" />
+            <button type="submit" id="signup-btn">Create</button>
+        </form>
     </div>
-    <div>
-      <label for="password-input-login">Password</label>
-      <input type="password" id="password-input-login" />
+    <div class="form-container sign-in-container">
+        <form action="#" id="login-form">
+            <h1>Sign in</h1>
+            
+            <span>Placeholder Text Here</span>
+            <input type="text" placeholder="Username" id="username-input-login" />
+            <input type="password" placeholder="Password" id="password-input-login" />
+            <a href="ADD THE URL FOR FORGOT PASSWORD PAGE?">Forgot your password?</a>
+            <button type="submit" id="login-btn">Login</button>
+        </form>
     </div>
-    <button type="submit" id="login-btn">Login!</button>
-    <a type="button" href="/signup">Sign up instead</a>
-  </form>
+    <div class="overlay-container">
+        <div class="overlay">
+            <div class="overlay-panel overlay-left">
+                <h1>Welcome Back!</h1>
+                To keep connected with us please login with your personal info
+                <button class="ghost" id="signIn">Sign In</button>
+            </div>
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, Friend!</h1>
+                Enter your personal details and start your journey with us
+                <button class="ghost" id="signUp">Sign Up</button>
+            </div>
+        </div>
+    </div>
 </div>
-
-<script src="/js/login.js"></script>
+ 
+<script src="../public/js/login.js"></script>
+<script src="../public/js/signup.js"></script>
