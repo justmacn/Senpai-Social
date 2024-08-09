@@ -6,24 +6,29 @@ const sequelize = require("../config/connection");
 
 class ExampleData extends Model {}
 
-ExampleData.init(
+SocialConnection.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
+    friendshipId: //Uniqe identifier of each friendship
+   {  
+      type: DataTypes.INTEGER, 
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    message: {
-      type: DataTypes.STRING,
+    userId1: //The ID of the first user
+    {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
-    user_id: {
+    userId2: //The ID of the second user
+    {
       type: DataTypes.INTEGER,
-      references: {
-        model: "user",
-        key: "id",
-      },
+      allowNull: false,
+
+      // references: {
+      //   model: "user",
+      //   key: "id",
+      // },
     },
     // Reminder- Add any new columns to the ExampleData model here
   },
@@ -36,4 +41,4 @@ ExampleData.init(
   }
 );
 
-module.exports = ExampleData;
+module.exports = SocialConnection;

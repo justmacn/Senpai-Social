@@ -12,6 +12,7 @@ class User extends Model {
 }
 User.init(
   {
+    //Columns for the user
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -28,7 +29,21 @@ User.init(
       validate: {
         len: [8, Infinity],
       },
-      // Reminder- add any new columns you'd like to the User model here
+    },
+    bio: {
+      type: DataTypes.TEXT, 
+      allowNull: false,
+      max: 250,
+      isAlphanumeric: true,
+    },
+    profilePicture: {
+      type: DataTypes.STRING,
+      //Look up how to build this out? Multer?
+    },
+    favoriteAnime: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      isAlphanumeric: true,
     },
   },
   {
