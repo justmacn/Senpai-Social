@@ -1,12 +1,11 @@
 const router = require("express").Router();
 
 // Import any models you plan to use for data's routes here
-const { ExampleData, User } = require("../models/");
-
-// If you would like to use an authGuard middleware, import it here
+const { ExampleData, User } = require("../models");
 
 // add a get / (landing page) route here
 router.get("/", async (req, res) => {
+  // FEEDS BELOW
   try {
     const exampleData = await ExampleData.findAll({
       include: [User],
@@ -21,24 +20,6 @@ router.get("/", async (req, res) => {
       loggedIn: req.session.logged_in,
       username: req.session.username,
     });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// add a get /login route here
-router.get("/login", (req, res) => {
-  try {
-    res.render("login");
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-// add a get /signup route here
-router.get("/signup", (req, res) => {
-  try {
-    res.render("signup");
   } catch (err) {
     res.status(500).json(err);
   }

@@ -1,13 +1,17 @@
 const router = require("express").Router();
 
 // Import all of the routes from controllers here
-const homeRoutes = require("./homeRoutes");
+const landingRoutes = require("./landingRoutes");
 const apiRoutes = require("./api/");
-const pageOneRoutes = require("./pageOneRoutes");
+const homeRoutes = require("./homeRoutes");
+const profileRoutes = require("./profileRoutes");
+const marketRoutes = require("./marketRoutes");
 
 // Connect the routes to the router here
-router.use("/", homeRoutes);
+router.use("/", landingRoutes);
 router.use("/api", apiRoutes);
-router.use("/pageOne", pageOneRoutes);
+router.use("/home", homeRoutes);
+router.use("/profile", profileRoutes);
+router.use("/marketplace", marketRoutes);
 
 module.exports = router;
