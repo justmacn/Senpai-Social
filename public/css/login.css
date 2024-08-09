@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
- 
+
 * {
     box-sizing: border-box;
 }
- 
+
 body {
     background: #f6f5f7;
     display: flex;
@@ -14,16 +14,16 @@ body {
     height: 100vh;
     margin: -20px 0 50px;
 }
- 
+
 h1 {
     font-weight: bold;
     margin: 0;
 }
- 
+
 h2 {
     text-align: center;
 }
- 
+
 p {
     font-size: 14px;
     font-weight: 100;
@@ -31,23 +31,23 @@ p {
     letter-spacing: 0.5px;
     margin: 20px 0 30px;
 }
- 
+
 span {
     font-size: 12px;
 }
- 
+
 a {
     color: #333;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
 }
- 
+
 button {
     border-radius: 20px;
-    border: 1px solid #2c90e3; /* Updated color */
-    background-color: #2c90e3; /* Updated color */
-    color: #ffffff; /* Updated color */
+    border: 1px solid #2c90e3;
+    background-color: #2c90e3;
+    color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
     padding: 12px 45px;
@@ -55,22 +55,22 @@ button {
     text-transform: uppercase;
     transition: transform 80ms ease-in;
 }
- 
+
 button:active {
     transform: scale(0.95);
 }
- 
+
 button:focus {
     outline: none;
 }
- 
+
 button.ghost {
     background-color: transparent;
     border-color: #FFFFFF;
 }
- 
+
 form {
-    background-color: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.8); /* Set form background to semi-transparent */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,8 +78,10 @@ form {
     padding: 0 50px;
     height: 100%;
     text-align: center;
+    position: relative;
+    z-index: 2; /* Ensure forms are above the video but below the overlay */
 }
- 
+
 input {
     background-color: #eee;
     border: none;
@@ -87,62 +89,68 @@ input {
     margin: 8px 0;
     width: 100%;
 }
- 
+
 .container {
-    background-color: #fff;
+    background-color: transparent; /* Set to transparent so the video shows through */
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
-            0 10px 10px rgba(0,0,0,0.22);
+                0 10px 10px rgba(0,0,0,0.22);
     position: relative;
     overflow: hidden;
     width: 768px;
     max-width: 100%;
     min-height: 480px;
 }
- 
+
 .form-container {
     position: absolute;
     top: 0;
     height: 100%;
-    transition: all 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
 }
- 
+
+.sign-in-container,
+.sign-up-container {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}
+
 .sign-in-container {
     left: 0;
-    width: 50%;
-    z-index: 2;
+    z-index: 2; /* Ensure it’s above the sign-up container */
 }
- 
+
 .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
-}
- 
-.sign-up-container {
-    left: 0;
-    width: 50%;
     opacity: 0;
-    z-index: 1;
 }
- 
+
+.sign-up-container {
+    right: 0;
+    opacity: 0; /* Start hidden */
+    z-index: 1; /* Ensure it’s below the sign-in container */
+}
+
 .container.right-panel-active .sign-up-container {
-    transform: translateX(100%);
-    opacity: 1;
+    transform: translateX(0);
+    opacity: 1; /* Fade in */
     z-index: 5;
-    animation: show 0.6s;
 }
- 
+
 @keyframes show {
     0%, 49.99% {
-        opacity: 0;
-        z-index: 1;
+        opacity: 0; /* Fade out */
+        z-index: 1; /* Ensure it’s below */
     }
- 
     50%, 100% {
-        opacity: 1;
-        z-index: 5;
+        opacity: 1; /* Fade in */
+        z-index: 5; /* Ensure it’s above */
     }
 }
- 
+
 .overlay-container {
     position: absolute;
     top: 0;
@@ -153,19 +161,19 @@ input {
     transition: transform 0.6s ease-in-out;
     z-index: 100;
 }
- 
-.container.right-panel-active .overlay-container{
+
+.container.right-panel-active .overlay-container {
     transform: translateX(-100%);
 }
- 
+
 .overlay {
-    background: #59a8e9; /* Updated color */
-    background: -webkit-linear-gradient(to right, #2c90e3, #59a8e9); /* Updated colors */
-    background: linear-gradient(to right, #2c90e3, #59a8e9); /* Updated colors */
+    background: #59a8e9;
+    background: -webkit-linear-gradient(to right, #2c90e3, #59a8e9);
+    background: linear-gradient(to right, #2c90e3, #59a8e9);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0 0;
-    color: #ffffff; /* Updated color */
+    color: #FFFFFF;
     position: relative;
     left: -100%;
     height: 100%;
@@ -173,11 +181,11 @@ input {
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
 }
- 
+
 .container.right-panel-active .overlay {
     transform: translateX(50%);
 }
- 
+
 .overlay-panel {
     position: absolute;
     display: flex;
@@ -192,28 +200,28 @@ input {
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
 }
- 
+
 .overlay-left {
     transform: translateX(-20%);
 }
- 
+
 .container.right-panel-active .overlay-left {
     transform: translateX(0);
 }
- 
+
 .overlay-right {
     right: 0;
     transform: translateX(0);
 }
- 
+
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
- 
+
 .social-container {
     margin: 20px 0;
 }
- 
+
 .social-container a {
     border: 1px solid #DDDDDD;
     border-radius: 50%;
@@ -224,7 +232,7 @@ input {
     height: 40px;
     width: 40px;
 }
- 
+
 footer {
     background-color: #222;
     color: #fff;
@@ -236,17 +244,27 @@ footer {
     text-align: center;
     z-index: 999;
 }
- 
+
 footer p {
     margin: 10px 0;
 }
- 
+
 footer i {
     color: red;
 }
- 
+
 footer a {
     color: #3c97bf;
     text-decoration: none;
 }
 
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1; /* Ensure video is behind the form and overlay */
+}
