@@ -29,4 +29,8 @@ router.get("/", withGuard, async (req, res) => {
   }
 });
 
+// route to edit user profile
+router.put("/edit", withGuard, async (req, res) => {})
+
+
 module.exports = router;
