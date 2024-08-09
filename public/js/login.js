@@ -1,4 +1,4 @@
-// SIGNUP/LOGIN MODAL
+// LOGIN MODAL
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
@@ -10,7 +10,7 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
   container.classList.remove("right-panel-active");
 });
-// END OF SIGNUP/LOGIN MODAL
+// END OF LOGIN MODAL
 
 const loginFormHandler = async function (event) {
   event.preventDefault();
