@@ -1,0 +1,46 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {{! Reminder- Edit this for your project! }}
+    <title>Project Two Example</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+
+  <body>
+    {{! Navbar }}
+    <nav id="nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pageOne">Page One</a></li>
+        {{#if loggedIn}}
+          <li><a href="#" id="logout">Logout</a></li>
+        {{else}}
+          <li><a href="/login">Login</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+    {{! Header }}
+    <header id="header">
+      <h1>This header is showing up on every page!</h1>
+    </header>
+
+    {{! Content }}
+    <main>
+      {{!-- Reminder- Depending on which route your user is visiting, the {{{body}}} will be replaced with the respective handlebar located in the /views/ directory!--}}
+      {{{body}}}
+    </main>
+
+    {{! Footer }}
+    <footer id="footer">
+      <h1>
+        This footer is showing up on every page!</h1>
+    </footer>
+
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+  </body>
+
+</html>

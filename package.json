@@ -1,0 +1,43 @@
+{
+  "name": "example-project-two",
+  "version": "1.0.0",
+  "description": "Write a description about your app here",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "seed": "node seeds/seed.js"
+  },
+  "keywords": ["Keyworkd1", "Keyword2", "Keyword3"],
+  "author": "Your Name",
+  "contributors": [{
+    "name": "Contributor Name",
+    "email": "contributor.email@email.com",
+    "url": "https://github.com/contributorUsername"
+  },
+  {
+    "name": "Contributor2 Name",
+    "email": "contibutor2.email@email.com",
+    "url": "https://github.com/contributor2Username"
+  },
+  {
+    "name": "Contributor3 Name",
+    "email": "contibutor3.email@email.com",
+    "url": "https://github.com/contributor3Username"
+  }
+    ],
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "express-session": "^1.17.1",
+    "pg": "^8.11.3",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}

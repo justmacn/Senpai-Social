@@ -1,0 +1,27 @@
+[
+  { "user_id": 1, "message": "THIS IS AN EXAMPLE OF SOME JSON DATA" },
+  {
+    "user_id": 2,
+    "message": "DON'T FORGET TO RUN YOUR 'schema.sql' BEFORE YOU TRY SEEDING YOUR DATA"
+  },
+  {
+    "user_id": 3,
+    "message": "DON'T FORGET TO EDIT YOUR 'schema.sql' TO A DB NAME THAT IS APPLICABLE TO YOUR PROJECT "
+  },
+  {
+    "user_id": 4,
+    "message": "TO RUN THE SEEDER, OPEN YOUR TERMINAL AT THE ROOT DIRECTORY OF YOUR PROJECT AND RUN 'npm run seed' TO INSERT THIS DATA"
+  },
+  {
+    "user_id": 5,
+    "message": "IF YOU HAVE ANY QUESTIONS, PLEASE REACH OUT TO YOUR INSTRUCTIONAL STAFF OR GROUP MEMBERS"
+  },
+  {
+    "user_id": 6,
+    "message": "REMEMBER, TAKE 15, THEN ASK THE TEAM. AFTER 30 FULL MINUTES OF BEING STUCK ON SOMETHING, REACH OUT TO YOUR INSTRUCTIONAL STAFF"
+  },
+  {
+    "user_id": 7,
+    "message": "GOOD LUCK AND HAPPY CODING! - JOHN, CODY, AND MARY <3"
+  }
+]

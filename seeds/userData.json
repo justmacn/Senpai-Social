@@ -1,0 +1,16 @@
+[
+  { "username": "yennefer", "password": "testtest" },
+  { "username": "geralt", "password": "testtest" },
+  { "username": "ciri", "password": "testtest" },
+  { "username": "triss", "password": "testtest" },
+  { "username": "dandelion", "password": "testtest" },
+  { "username": "zoltan", "password": "testtest" },
+  { "username": "vesemir", "password": "testtest" },
+  { "username": "eskell", "password": "testtest" },
+  { "username": "regis", "password": "testtest" },
+  { "username": "milva", "password": "testtest" },
+  { "username": "angouleme", "password": "testtest" },
+  { "username": "coen", "password": "testtest" },
+  { "username": "keira", "password": "testtest" },
+  { "username": "shani", "password": "testtest" }
+]
