@@ -1,22 +1,29 @@
-/* any css stylesheets can go in this folder */
-/* hint- remember to import them in your handlebars! */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+:root {
+  --mainblue: #2c90e3;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 #header {
-  background-color: lightblue;
+  background-color: var(--mainblue);
+  padding-right: 4rem;
 }
 #footer {
-  background-color: lightcoral;
-}
-#nav {
-  display: flex;
+  background-color: var(--mainblue);
 }
 
-#nav > ul {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
+#home-btn,
+#profile-btn,
+#market-btn,
+#logout-btn {
+  color:  white;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 501;
 }
-
-#nav > ul > li {
-  margin: 0 10px;
-}
-
