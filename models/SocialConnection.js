@@ -4,7 +4,7 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class ExampleData extends Model {}
+class SocialConnection extends Model {}
 
 SocialConnection.init(
   {
@@ -37,7 +37,7 @@ SocialConnection.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "data one",
+    modelName: "social_connection",
   }
 );
 
