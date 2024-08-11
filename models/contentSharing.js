@@ -23,7 +23,6 @@ ContentSharing.init(
         //ID of user who uploaded art
         type: DataTypes.INTEGER,
         allowNull: false,
-        autoIncrement: true,
       },
      image_url: {
         type: DataTypes.STRING,

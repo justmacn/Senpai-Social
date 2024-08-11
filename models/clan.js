@@ -12,7 +12,7 @@ class Clan extends Model {
 
 Clan.init(
     {
-    clan_id: {
+    id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,

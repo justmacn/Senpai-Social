@@ -48,8 +48,10 @@ User.init(
     clan_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+      references: {
+          model: "clan",
+           key: "id",
+         },
     },
   },
   {
