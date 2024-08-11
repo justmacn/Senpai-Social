@@ -4,9 +4,9 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class animeContentManagement extends Model {}
+class Anime extends Model {}
 
-animeContentManagement.init(
+Anime.init(
     {
        animeId: {
         type: DataTypes.INTEGER,
@@ -45,8 +45,8 @@ animeContentManagement.init(
         sequelize,
         freezeTableName: true,
         underscored: true,
-        modelName: "animeContentManagement", 
+        modelName: "anime", 
     }
 );
 
-module.exports = animeContentManagement;
+module.exports = anime;

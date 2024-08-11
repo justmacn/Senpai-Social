@@ -1,6 +1,9 @@
 // import all models here
 const User = require("./User");
-const ExampleData = require("./Friends");
+const Friends = require("./Friends");
+const Post = require("./feed");
+const Clan = require("./Clan");
+const Anime = require("./anime");
 const { classToInvokable } = require("sequelize/types/utils");
 
 // Reminder- create any additional associations here
@@ -12,9 +15,9 @@ User.hasMany(FanArt, { foreignKey: 'userId' });
 User.hasMany(Feed, { foreignKey: 'userId' });
 
 //friends association
-User.belongsToMany(User, { as: 'Friends', through: Friendship, foreignKey: 'userId1', otherKey: 'userId2' });
-Friendship.belongsTo(User, { as: 'User1', foreignKey: 'userId1' });
-Friendship.belongsTo(User, { as: 'User2', foreignKey: 'userId2' });
+User.belongsToMany(User, { as: 'Friends', through: friends, foreignKey: 'userId1', otherKey: 'userId2' });
+Friends.belongsTo(User, { as: 'User1', foreignKey: 'userId1' });
+Friends.belongsTo(User, { as: 'User2', foreignKey: 'userId2' });
 
 //feed association
 Post.belongsTo(User, { foreignKey: 'userId' });
@@ -27,8 +30,11 @@ Clan.hasMany(Users, { foreignKey: 'userId' });
 Clan.hasMany(Post, { foreignKey: 'postId' });
 
 
-
+//anime content management association
+Anime.hasMany(Episode, { foreignKey: 'animeId' });
+Anime.hasMany(Review, { foreignKey: 'animeId' });
+Anime.hasMany(FanArt, { foreignKey: 'animeId' });
 
 
 // export all models here
-module.exports = { User, ExampleData };
+module.exports = { User, Friends, Post, Clan };
