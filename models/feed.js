@@ -4,22 +4,22 @@ const bcrypt = require("bcrypt");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class feed extends Model {
+class Feed extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-feed.init(
+Feed.init(
     //columns for user posts
     {
-       postID: {
+       post_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
         }, 
-       userID: {
+       user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
@@ -48,5 +48,5 @@ feed.init(
     }
       );
       
-      module.exports = feed;  
+      module.exports = Feed;  
     

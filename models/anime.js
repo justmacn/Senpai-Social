@@ -4,11 +4,15 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class Anime extends Model {}
+class Anime extends Model {
+    checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+   }
+}
 
 Anime.init(
     {
-       animeId: {
+       anime_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
@@ -49,4 +53,4 @@ Anime.init(
     }
 );
 
-module.exports = anime;
+module.exports = Anime;

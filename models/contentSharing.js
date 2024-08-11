@@ -4,24 +4,28 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class contentSharing extends Model {}
+class ContentSharing extends Model {
+    checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+   }
+}
 
-contentSharing.init(
+ContentSharing.init(
 //for sharing anime fan art
     {
-      artId: {
+      art_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true,
       },
-      userId: {
+      user_id: {
         //ID of user who uploaded art
         type: DataTypes.INTEGER,
         allowNull: false,
         autoIncrement: true,
       },
-     imageUrl: {
+     image_url: {
         type: DataTypes.STRING,
       }, 
      description: {
@@ -29,7 +33,7 @@ contentSharing.init(
         allowNull: false,
         isAlphanumeric: true, 
       },
-     animeId: {
+     anime_id: {
         //id of related Anime, if applicable
         type: DataTypes.INTEGER,
         allowNull: true,
@@ -46,4 +50,4 @@ contentSharing.init(
     }
 );
 
-module.exports = userPosts;
+module.exports = ContentSharing;

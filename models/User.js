@@ -36,14 +36,20 @@ User.init(
       max: 250,
       isAlphanumeric: true,
     },
-    profilePicture: {
+    profile_picture: {
       type: DataTypes.STRING,
       //Look up how to build this out? Multer?
     },
-    favoriteAnime: {
+    favorite_anime: {
       type: DataTypes.STRING,
       allowNull: false,
       isAlphanumeric: true,
+    },
+    clan_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
   },
   {

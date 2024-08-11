@@ -4,23 +4,27 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class friends extends Model {}
+class Friends extends Model {
+  checkPassword(loginPw) {
+  return bcrypt.compareSync(loginPw, this.password);
+ }
+}
 
-friends.init(
+Friends.init(
   {
-    friendshipId: //Uniqe identifier of each friendship
+    friendship_id: //Uniqe identifier of each friendship
    {  
       type: DataTypes.INTEGER, 
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    userId1: //The ID of the first user
+    user_id1: //The ID of the first user
     {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    userId2: //The ID of the second user
+    user_id2: //The ID of the second user
     {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -41,4 +45,4 @@ friends.init(
   }
 );
 
-module.exports = friends;
+module.exports = Friends;

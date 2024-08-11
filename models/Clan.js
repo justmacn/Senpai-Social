@@ -4,7 +4,11 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class Clan extends Model {}
+class Clan extends Model {
+    checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+   }
+}
 
 Clan.init(
     {
