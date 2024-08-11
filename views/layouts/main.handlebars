@@ -9,15 +9,14 @@
 </head>
 
 <body>
-  {{! Header }}
-  <header class="container min-vw-100 mx-0 py-2" id="header">
+  {{#if loggedIn}}
+  <header class="container min-vw-100 mx-0 py-2" id="header-loggedIn">
     {{! Navbar }}
     <nav class="row align-items-center" id="nav">
       {{!-- flex item 1 LOGO --}}
       <div class="col-3 text-center" id="logo-container">
         <img src="/images/ss-logo-placeholder.png" alt="SenpaiSocial logo" class="img-fluid pt-1">
       </div>
-      {{#if loggedIn}}
       {{!-- flex item 2 HOME & PROFILE --}}
       <div class="col-2 p-0 d-flex flex-row ">
         <div class="ps-3 pt-2 col-4" id="btn-container">
@@ -27,8 +26,8 @@
         <div class="pt-2" id="btn-container">
           <div class="btn-group">
             <button type="button" class="btn" id="profile-btn">My Profile</button>
-            <button type="button" class="btn dropdown-toggle dropdown-toggle-split p-0" id="profile-btn" data-bs-toggle="dropdown"
-              aria-expanded="false">
+            <button type="button" class="btn dropdown-toggle dropdown-toggle-split p-0" id="profile-btn"
+              data-bs-toggle="dropdown" aria-expanded="false">
               <span class="visually-hidden">Toggle Dropdown</span>
             </button>
             <ul class="dropdown-menu">
@@ -61,10 +60,21 @@
           <button type="button" class="btn logout" id="logout-btn">Logout</button>
         </div>
       </div>
-      {{/if}}
       </div>
     </nav>
   </header>
+  {{else}}
+  {{! Header }}
+  <header class="container min-vw-100 mx-0 pt-2" id="header">
+    {{! Navbar }}
+    <nav class="row align-items-center" id="nav">
+      {{!-- flex item 1 LOGO --}}
+      <div class="text-center" id="logo-container">
+        <img src="/images/ss-logo-placeholder-8.png" alt="SenpaiSocial logo" class="img-fluid pt-4">
+      </div>
+    </nav>
+  </header>
+  {{/if}}
 
   {{! Content }}
   <main>
@@ -73,7 +83,19 @@
 
   {{! Footer }}
   <footer id="footer">
-    <h1>This footer is showing up on every page!</h1>
+    <div class="container-fluid pb-3">
+      <div class="d-flex flex-row justify-content-center">
+        <div class="pe-2">
+          Contact Us
+        </div>
+        <div class="px-3">
+          Developers
+        </div>
+        <div class="ps-2">
+          &copy;2024 SenpaiSocial
+        </div>
+      </div>
+    </div>
   </footer>
 
   {{#if loggedIn}}

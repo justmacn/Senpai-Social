@@ -14,10 +14,14 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure body takes up full viewport height */
+  /* min-height: 100vh; Ensure body takes up full viewport height */
 }
 
 #header {
+  background-color: var(--mainblue);
+}
+
+#header-loggedIn {
   background-color: var(--mainblue);
   padding-right: 4rem;
   position: relative; /* Ensures header is in the normal document flow */
@@ -26,7 +30,7 @@ body {
 
 #footer {
   background-color: var(--mainblue);
-  padding: 1rem; /* Optional: Add some padding for the footer */
+  padding: 0.5rem; /* Optional: Add some padding for the footer */
   text-align: center;
 }
 
@@ -40,24 +44,26 @@ body {
 }
 
 main {
-  flex: 1; /* Allows main to take up remaining space */
+  flex: 1; 
+  /* Allows main to take up remaining space */
 }
 
 footer {
-  background-color: #222;
   color: #fff;
   font-size: 14px;
   bottom: 0;
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   text-align: center;
   z-index: 999;
+  font-family: 'Montserrat', sans-serif;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.873); */
 }
 
-footer p {
+/* footer p {
   margin: 10px 0;
-}
+} */
 
 footer i {
   color: red;
@@ -66,4 +72,8 @@ footer i {
 footer a {
   color: #3c97bf;
   text-decoration: none;
+}
+
+header img {
+  scale: 125%;
 }
