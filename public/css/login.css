@@ -90,7 +90,7 @@ input {
     width: 100%;
 }
 
-.container {
+.logo-container {
     background-color: transparent; /* Set to transparent so the video shows through */
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -123,7 +123,7 @@ input {
     z-index: 2; /* Ensure it’s above the sign-up container */
 }
 
-.container.right-panel-active .sign-in-container {
+.logo-container.right-panel-active .sign-in-container {
     transform: translateX(100%);
     opacity: 0;
 }
@@ -134,7 +134,7 @@ input {
     z-index: 1; /* Ensure it’s below the sign-in container */
 }
 
-.container.right-panel-active .sign-up-container {
+.logo-container.right-panel-active .sign-up-container {
     transform: translateX(0);
     opacity: 1; /* Fade in */
     z-index: 5;
@@ -162,7 +162,7 @@ input {
     z-index: 100;
 }
 
-.container.right-panel-active .overlay-container {
+.logo-container.right-panel-active .overlay-container {
     transform: translateX(-100%);
 }
 
@@ -182,7 +182,7 @@ input {
     transition: transform 0.6s ease-in-out;
 }
 
-.container.right-panel-active .overlay {
+.logo-container.right-panel-active .overlay {
     transform: translateX(50%);
 }
 
@@ -205,7 +205,7 @@ input {
     transform: translateX(-20%);
 }
 
-.container.right-panel-active .overlay-left {
+.logo-container.right-panel-active .overlay-left {
     transform: translateX(0);
 }
 
@@ -214,7 +214,7 @@ input {
     transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.logo-container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
 
