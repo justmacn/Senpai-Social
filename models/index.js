@@ -1,8 +1,8 @@
 // import all models here
-const User = require("./user");
-const Friends = require("./friends");
+const User = require("./userfj");
+const Friends = require("./friendsfc");
 const Post = require("./feed");
-const Clan = require("./clan");
+const Clan = require("./clanfw");
 const Anime = require("./anime");
 const { classToInvokable } = require("sequelize/types/utils");
 

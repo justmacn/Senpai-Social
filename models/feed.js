@@ -13,16 +13,18 @@ class Feed extends Model {
 Feed.init(
     //columns for user posts
     {
+       id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+       },
        post_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
         }, 
        user_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        autoIncrement: true,
         },
        //user posts
        content: {
