@@ -11,12 +11,23 @@ body {
   padding: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure body takes up full viewport height */
+}
+
 #header {
   background-color: var(--mainblue);
   padding-right: 4rem;
+  position: relative; /* Ensures header is in the normal document flow */
+  z-index: 1000; /* Keeps header above other content */
 }
+
 #footer {
   background-color: var(--mainblue);
+  padding: 1rem; /* Optional: Add some padding for the footer */
+  text-align: center;
 }
 
 #home-btn,
@@ -26,4 +37,8 @@ body {
   color:  white;
   font-family: 'Montserrat', sans-serif;
   font-weight: 501;
+}
+
+main {
+  flex: 1; /* Allows main to take up remaining space */
 }

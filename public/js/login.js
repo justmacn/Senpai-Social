@@ -1,7 +1,7 @@
 // LOGIN MODAL
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+const container = document.getElementById('logo_container');
 
 signUpButton.addEventListener('click', () => {
   container.classList.add("right-panel-active");
