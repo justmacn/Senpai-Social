@@ -4,13 +4,13 @@ const bcrypt = require("bcrypt");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class userPosts extends Model {
+class feed extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-userPosts.init(
+feed.init(
     //columns for user posts
     {
        postID: {
@@ -44,9 +44,9 @@ userPosts.init(
           sequelize,
           freezeTableName: true,
           underscored: true,
-          modelName: "userPosts",
+          modelName: "feed",
     }
       );
       
-      module.exports = userPosts;  
+      module.exports = feed;  
     

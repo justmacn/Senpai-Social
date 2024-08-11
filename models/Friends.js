@@ -4,9 +4,9 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class SocialConnection extends Model {}
+class friends extends Model {}
 
-SocialConnection.init(
+friends.init(
   {
     friendshipId: //Uniqe identifier of each friendship
    {  
@@ -37,8 +37,8 @@ SocialConnection.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "social_connection",
+    modelName: "friends",
   }
 );
 
-module.exports = SocialConnection;
+module.exports = friends;

@@ -4,12 +4,12 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class SocialConnection extends Model {}
+class contentSharing extends Model {}
 
 contentSharing.init(
 //for sharing anime fan art
     {
-      artID: {
+      artId: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,

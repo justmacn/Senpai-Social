@@ -4,7 +4,7 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class SocialConnection extends Model {}
+class animeContentManagement extends Model {}
 
 animeContentManagement.init(
     {
