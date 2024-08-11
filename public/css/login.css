@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-body {
+.login-body {
     background: #f6f5f7;
     display: flex;
     justify-content: center;
@@ -20,7 +20,7 @@ body {
     margin: 0;
 }
 
-p {
+.login-body p {
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
@@ -28,18 +28,18 @@ p {
     margin: 20px 0 30px;
 }
 
-span {
+.login-body span {
     font-size: 12px;
 }
 
-a {
+.login-body a {
     color: #333;
     font-size: 14px;
     text-decoration: none;
     margin: 15px 0;
 }
 
-button {
+.login-body button {
     border-radius: 20px;
     border: 1px solid #2c90e3;
     background-color: #2c90e3;
@@ -52,20 +52,20 @@ button {
     transition: transform 80ms ease-in;
 }
 
-button:active {
+.login-body button:active {
     transform: scale(0.95);
 }
 
-button:focus {
+.login-body button:focus {
     outline: none;
 }
 
-button.ghost {
+.login-body button.ghost {
     background-color: transparent;
     border-color: #FFFFFF;
 }
 
-form {
+.login-body form {
     background-color: rgba(255, 255, 255, 0.8); /* Set form background to semi-transparent */
     display: flex;
     align-items: center;
@@ -78,7 +78,7 @@ form {
     z-index: 2; /* Ensure forms are above the video but below the overlay */
 }
 
-input {
+.login-body input {
     background-color: #eee;
     border: none;
     padding: 12px 15px;
