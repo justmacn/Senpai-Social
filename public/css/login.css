@@ -5,14 +5,15 @@
 }
 
 .login-body {
-    background: #f6f5f7;
+    background-color: #2c90e3;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
-    margin: -20px 0 50px;
+    height: 100%;
+    /* margin: -20px 0 50px; */
+    padding: 7.5rem 5rem 0;
 }
 
 .login-h1 {
@@ -41,8 +42,8 @@
 
 .login-body button {
     border-radius: 20px;
-    border: 1px solid #2c90e3;
-    background-color: #2c90e3;
+    border: 1px solid #86bfef;
+    background-color: #86bfef;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -79,14 +80,14 @@
 }
 
 .login-body input {
-    background-color: #eee;
+    background-color: #ffffff;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
 }
 
-.logo-container {
+.login-container {
     background-color: transparent; /* Set to transparent so the video shows through */
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
@@ -119,7 +120,7 @@
     z-index: 2; /* Ensure it’s above the sign-up container */
 }
 
-.logo-container.right-panel-active .sign-in-container {
+.login-container.right-panel-active .sign-in-container {
     transform: translateX(100%);
     opacity: 0;
 }
@@ -130,7 +131,7 @@
     z-index: 1; /* Ensure it’s below the sign-in container */
 }
 
-.logo-container.right-panel-active .sign-up-container {
+.login-container.right-panel-active .sign-up-container {
     transform: translateX(0);
     opacity: 1; /* Fade in */
     z-index: 5;
@@ -158,7 +159,7 @@
     z-index: 100;
 }
 
-.logo-container.right-panel-active .overlay-container {
+.login-container.right-panel-active .overlay-container {
     transform: translateX(-100%);
 }
 
@@ -178,7 +179,7 @@
     transition: transform 0.6s ease-in-out;
 }
 
-.logo-container.right-panel-active .overlay {
+.login-container.right-panel-active .overlay {
     transform: translateX(50%);
 }
 
@@ -201,7 +202,7 @@
     transform: translateX(-20%);
 }
 
-.logo-container.right-panel-active .overlay-left {
+.login-container.right-panel-active .overlay-left {
     transform: translateX(0);
 }
 
@@ -210,7 +211,7 @@
     transform: translateX(0);
 }
 
-.logo-container.right-panel-active .overlay-right {
+.login-container.right-panel-active .overlay-right {
     transform: translateX(20%);
 }
 
