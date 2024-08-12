@@ -4,22 +4,12 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class Post extends Model {
-  checkPassword(loginPw) {
-    return bcrypt.compareSync(loginPw, this.password);
-  }
-}
+class Post extends Model {}
 
 Post.init(
   //for sharing art and status
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    user_id: {
+    author_id: {
       //ID of user who's posting
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -28,21 +18,18 @@ Post.init(
         key: "id",
       }
     },
-    image_url: {
-      type: DataTypes.STRING,
-    },
     text: {
       type: DataTypes.TEXT,
       allowNull: false,
     },
+    image: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
     anime_title: {
       //title of related Anime, if applicable
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: true,
-      references: {
-        model: "anime",
-        key: "id"
-      }
     },
   },
   {

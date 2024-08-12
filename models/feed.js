@@ -13,11 +13,6 @@ class Feed extends Model {
 Feed.init(
   //columns for user posts
   {
-    id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     post_id: {
       type: DataTypes.ARRAY(DataTypes.INTEGER),
       allowNull: true,
