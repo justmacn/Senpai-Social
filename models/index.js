@@ -1,18 +1,16 @@
 // import all models here
 const User = require("./user");
 const Friends = require("./friends");
-const Post = require("./feed");
+const Feed = require("./feed");
 const Clan = require("./clan");
 const Anime = require("./anime");
-const Comment = require("./comment");
+const Post = require("./post");
 const Items = require("./items");
-const Orders = require("./orders");
-const Transactions = require("./transactions");
 const { classToInvokable } = require("sequelize/types/utils");
 
 // Reminder- create any additional associations here
 //User Associations
-User.hasMany(Post, { foreignKey: 'user_id' });
+User.hasMany(Post, { foreignKey: 'post_id' });
 User.hasMany(Friends, { foreignKey: 'user_id1' });
 User.hasMany(Friends, { foreignKey: 'user_id2' });
 Feed.hasMany(Users, { foreignKey: 'user_id' });

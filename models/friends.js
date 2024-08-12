@@ -29,14 +29,15 @@ Friends.init(
       },
     },
     user_id2: //The ID of the second user
-        
-    {  type: DataTypes.INTEGER,
+
+    {
+      type: DataTypes.INTEGER,
       allowNull: false,
-    references: {
-      model: "user",
-      key: "id",
+      references: {
+        model: "user",
+        key: "id",
+      },
     },
-  },
 
   },
   {

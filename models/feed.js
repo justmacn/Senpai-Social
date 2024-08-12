@@ -11,54 +11,45 @@ class Feed extends Model {
 }
 
 Feed.init(
-    //columns for user posts
-    {
-       id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true,
-       },
-       post_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        }, 
-       user_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-          model: "user",
-          key: "id", 
-        }
-        },
-       //user posts
-       content: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-          isAlphanumeric: true,
-        },
-      },
-       likes: {
-        type: DataTypes.ARRAY(DataTypes.INTEGER), //array of user ids who like the post
-        allowNull: false,
-        },
-       comments: {
-        type: DataTypes.ARRAY(DataTypes.INTEGER), //List of comment IDs associated with the post.
-        allowNull: false,
-        references: {
-          model: "comment",
-          key: "id",
-        },
-       }, 
+  //columns for user posts
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-        
-          sequelize,
-          freezeTableName: true,
-          underscored: true,
-          modelName: "feed",
-    }
-      );
-      
-      module.exports = Feed;  
-    
+    post_id: {
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
+      allowNull: true,
+      references: {
+        model: "post",
+        key: "id",
+      }
+    },
+    market_id: {
+      type: DataTypes.ARRAY(DataTypes.INTEGER),
+      allowNull: true,
+      references: {
+        model: "market",
+        key: "id",
+      }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "user",
+        key: "id",
+      }
+    },
+  },
+  {
+    sequelize,
+    freezeTableName: true,
+    underscored: true,
+    modelName: "feed",
+  }
+);
+
+module.exports = Feed;
+

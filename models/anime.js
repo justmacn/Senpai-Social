@@ -36,15 +36,14 @@ Anime.init(
             isAlphanumeric: true,
         }, 
        },
-       episodes: {
+       episodes_total: {
         type: DataTypes.INTEGER,
-        //List of episode IDs of an anime
         allowNull: false,
-        
         },
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: "anime", 
