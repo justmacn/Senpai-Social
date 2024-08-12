@@ -12,7 +12,7 @@ class Anime extends Model {
 
 Anime.init(
     {
-       anime_id: {
+       id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
@@ -21,28 +21,26 @@ Anime.init(
        title: {
         type: DataTypes.STRING,
         allowNull: false,
-        max: 50,
-        isAlphanumeric: true,
+        len: [1, 50],
         },
        description: {
         type: DataTypes.TEXT,
         allowNull: false,
         max: 300, 
-        isAlphanumeric: true,
         },
        genre: {
         type: DataTypes.STRING,
         allowNull: false,
-        max: 20,
-        isAlphanumeric: true,
+        len: [1, 20],
+        validate: {
+            isAlphanumeric: true,
         }, 
+       },
        episodes: {
-        type: DataTypes.ARRAY,
+        type: DataTypes.INTEGER,
         //List of episode IDs of an anime
-        },
-       reviews: {
-        type: DataTypes.ARRAY,
-        //List of review IDs related to Anime
+        allowNull: false,
+        
         },
     },
     {

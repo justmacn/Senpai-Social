@@ -4,6 +4,7 @@ const Friends = require("./friends");
 const Post = require("./feed");
 const Clan = require("./clan");
 const Anime = require("./anime");
+const Comment = require("./comment");
 const { classToInvokable } = require("sequelize/types/utils");
 
 // Reminder- create any additional associations here

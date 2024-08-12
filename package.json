@@ -8,24 +8,29 @@
     "start": "nodemon server.js",
     "seed": "node seeds/seed.js"
   },
-  "keywords": ["Keyworkd1", "Keyword2", "Keyword3"],
+  "keywords": [
+    "Keyworkd1",
+    "Keyword2",
+    "Keyword3"
+  ],
   "author": "Your Name",
-  "contributors": [{
-    "name": "Contributor Name",
-    "email": "contributor.email@email.com",
-    "url": "https://github.com/contributorUsername"
-  },
-  {
-    "name": "Contributor2 Name",
-    "email": "contibutor2.email@email.com",
-    "url": "https://github.com/contributor2Username"
-  },
-  {
-    "name": "Contributor3 Name",
-    "email": "contibutor3.email@email.com",
-    "url": "https://github.com/contributor3Username"
-  }
-    ],
+  "contributors": [
+    {
+      "name": "Contributor Name",
+      "email": "contributor.email@email.com",
+      "url": "https://github.com/contributorUsername"
+    },
+    {
+      "name": "Contributor2 Name",
+      "email": "contibutor2.email@email.com",
+      "url": "https://github.com/contributor2Username"
+    },
+    {
+      "name": "Contributor3 Name",
+      "email": "contibutor3.email@email.com",
+      "url": "https://github.com/contributor3Username"
+    }
+  ],
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -38,6 +43,6 @@
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"
+    "nodemon": "^3.1.4"
   }
 }

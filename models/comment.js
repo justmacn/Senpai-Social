@@ -5,15 +5,15 @@ const bcrypt = require("bcrypt");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class Comments extends Model {
+class Comment extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-Comments.init(
+Comment.init(
     {
-        comment_id: {
+        id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
@@ -23,6 +23,10 @@ Comments.init(
             //user who made the comment
             type: DataTypes.INTEGER,
             allowNull: false,
+            references: {
+                model: "user",
+                key: "id",
+            },
         }, 
         content: {
             type: DataTypes.STRING,
@@ -30,6 +34,15 @@ Comments.init(
             isAlphanumeric: true,
             max: 250, 
         },
+        post_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: "feed",
+                key: "post_id",
+            },
+
+        }
         
     },
     {
@@ -38,7 +51,10 @@ Comments.init(
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: "comments",
+            modelName: "comment",
        
     },   
 )
+
+
+module.exports = Comment;
