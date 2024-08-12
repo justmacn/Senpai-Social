@@ -23,8 +23,8 @@ Clan.init(
       allowNull: false,
       validate: {
         len: [1, 150],
+      }, // Closed the validate object here
     },
-  },
     anime_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -35,7 +35,7 @@ Clan.init(
       validate: {
         len: [1, 300],
         isAlphanumeric: true,
-     },
+      }, // Closed the validate object here
     }, 
     clan_members: {
       type: DataTypes.STRING,
@@ -43,17 +43,16 @@ Clan.init(
       validate: {
         len: [1, 50],
         isAlphanumeric: true,
+      }, // Closed the validate object here
     },
-  },
-  //holds ID of clan members  
-   clan_member_id: {
+    // Holds ID of clan members  
+    clan_member_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "user",
         key: "id",
-     },
-
+      }, // Closed the references object here
     },
   },
   {
@@ -62,9 +61,7 @@ Clan.init(
     freezeTableName: true,
     underscored: true,
     modelName: "clan",
-  }
+  },
 );
-
-
 
 module.exports = Clan;

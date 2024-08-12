@@ -5,6 +5,9 @@ const Post = require("./feed");
 const Clan = require("./clan");
 const Anime = require("./anime");
 const Comment = require("./comment");
+const Items = require("./items");
+const Orders = require("./orders");
+const Transactions = require("./transactions");
 const { classToInvokable } = require("sequelize/types/utils");
 
 // Reminder- create any additional associations here
@@ -12,9 +15,11 @@ const { classToInvokable } = require("sequelize/types/utils");
 User.hasMany(Post, { foreignKey: 'user_id' });
 User.hasMany(Friends, { foreignKey: 'user_id1' });
 User.hasMany(Friends, { foreignKey: 'user_id2' });
-User.hasMany(FanArt, { foreignKey: 'user_id' });
 Feed.hasMany(Users, { foreignKey: 'user_id' });
 User.hasOne(Clan, { foreignKey: 'clan_id'})
+User.hasMany(Item, { foreignKey: 'user_id' });
+User.hasMany(Transaction, { foreignKey: 'buyer_id', as: 'BuyerTransactions' });
+User.hasMany(Transaction, { foreignKey: 'seller_id', as: 'SellerTransactions' });
 
 //friends association
 User.belongsToMany(User, { as: 'Friends', through: Friends, foreignKey: 'user_id1', otherKey: 'user_id2' });
@@ -38,5 +43,13 @@ Anime.hasMany(Review, { foreignKey: 'anime_id' });
 Anime.hasMany(FanArt, { foreignKey: 'anime_id' });
 
 
+//Marketlace Associations
+Items.belongsTo(User, { foreignKey: 'user_id' });
+Items.hasMany(Transactions, { foreignKey: 'item_id' });
+Orders.belongsTo(Items, { foreignKey: 'item_id' });
+Transactions.belongsTo(Orders, { foreignKey: 'order_id' });
+Transactions.belongsTo(User, { foreignKey: 'buyer_id', as: 'Buyer' });
+Transactions.belongsTo(User, { foreignKey: 'seller_id', as: 'Seller' });
+
 // export all models here
-module.exports = { User, Friends, Post, Clan, Anime };
+module.exports = { User, Friends, Post, Clan, Anime, Items, Orders, Transactions };
