@@ -4,13 +4,14 @@ const { Model, DataTypes } = require("sequelize");
 // Local Modules
 const sequelize = require("../config/connection");
 
-class Clan extends Model {
+class Post extends Model {
   checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
 
-Clan.init(
+Post.init(
+  //for sharing art and status
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,46 +19,40 @@ Clan.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 150],
-      }, // Closed the validate object here
-    },
-    anime_id: {
+    user_id: {
+      //ID of user who's posting
       type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "anime",
-        key: "id",
-      }
-    },
-    bio: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [1, 300],
-        isAlphanumeric: true,
-      },
-    }, 
-    // Holds ID of clan members  
-    member_id: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
       allowNull: false,
       references: {
         model: "user",
         key: "id",
-      },
+      }
+    },
+    image_url: {
+      type: DataTypes.STRING,
+    },
+    text: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
+    anime_title: {
+      //title of related Anime, if applicable
+      type: DataTypes.INTEGER,
+      allowNull: true,
+      references: {
+        model: "anime",
+        key: "id"
+      }
     },
   },
   {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
-    modelName: "clan",
-  },
+    modelName: "post",
+
+  }
 );
 
-module.exports = Clan;
+module.exports = Post;
