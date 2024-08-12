@@ -12,12 +12,6 @@ class Clan extends Model {
 
 Clan.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -25,14 +19,14 @@ Clan.init(
         len: [1, 150],
       }, // Closed the validate object here
     },
-    anime_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "anime",
-        key: "id",
-      }
-    },
+    // anime_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: "anime",
+    //     key: "id",
+    //   }
+    // },
     bio: {
       type: DataTypes.TEXT,
       allowNull: false,

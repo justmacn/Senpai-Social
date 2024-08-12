@@ -13,12 +13,6 @@ class User extends Model {
 //Columns for the user
 User.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -33,55 +27,49 @@ User.init(
     bio: {
       type: DataTypes.TEXT,
       allowNull: true,
-      validate: {
-        len: [1, 250],
-      },
     },
     //Look up how to build this out? Multer?
     profile_picture: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-
     favorite_anime: {
       type: DataTypes.STRING,
       allowNull: true,
-      validate: {
-        isAlphanumeric: true,
-      },
     },
-    clan_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      references: {
-        model: "clan",
-        key: "id",
-      },
-    },
+    // clan_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   references: {
+    //     model: "clan",
+    //     key: "id",
+    //   },
+    // },
     friends: {
       type: DataTypes.ARRAY(DataTypes.INTEGER),
       allowNull: true,
       references: {
-        model: "friends",
+        model: "user",
         key: "id",
       }
     }
   },
-  {
-    beforeCreate: async (newUserData) => {
-      newUserData.password = await bcrypt.hash(newUserData.password, 10);
-      return newUserData;
+  {  // options
+    hooks: {
+      beforeCreate: async (newUserData) => {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      beforeUpdate: async (updatedUserData) => {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
+        return updatedUserData;
+      }
     },
-    beforeUpdate: async (updatedUserData) => {
-      updatedUserData.password = await bcrypt.hash(
-        updatedUserData.password,
-        10
-      );
-      return updatedUserData;
-    },
-  },
-  {
     sequelize,
+    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "user",
