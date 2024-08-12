@@ -1,60 +1,62 @@
 // Third-party Modules
 const { Model, DataTypes } = require("sequelize");
-const bcrypt = require("bcrypt");
 
 // Local Modules
 const sequelize = require("../config/connection");
 
-class Comment extends Model {
-  checkPassword(loginPw) {
+class Orders extends Model {
+    checkPassword(loginPw) {
     return bcrypt.compareSync(loginPw, this.password);
-  }
+   }
 }
 
-Comment.init(
+Orders.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true,
-          },
-        user_id: {
-            //user who made the comment
+           },
+        buyer_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
                 model: "user",
                 key: "id",
             },
-        }, 
-        content: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            isAlphanumeric: true,
-            max: 250, 
-        },
-        post_id: {
+          },
+          item_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "feed",
-                key: "post_id",
+                model: "items",
+                key: "id",
             },
-
-        }
-        
-    },
-    {
-      
-        
+          },
+          quantity: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+          },
+          total_price: {
+           type:DataTypes.DECIMAL,
+           allowNull: false,
+          },
+          order_status: {
+            type: DataTypes.STRING,
+            allowNull: false, 
+          },
+          created_at: {
+            type: DataTypes.DATE,
+          },
+         },
+         {
             sequelize,
             freezeTableName: true,
             underscored: true,
-            modelName: "comment",
-       
-    },   
-)
+            modelName: "orders", 
+         },
+);
 
 
-module.exports = Comment;
+module.exports = Orders;

@@ -28,21 +28,27 @@ Feed.init(
         references: {
           model: "user",
           key: "id", 
-        },
+        }
         },
        //user posts
        content: {
         type: DataTypes.STRING,
         allowNull: false,
-        isAlphanumeric: true,
+        validate: {
+          isAlphanumeric: true,
         },
+      },
        likes: {
-        type: DataTypes.ARRAY, //array of user ids who like the post
+        type: DataTypes.ARRAY(DataTypes.INTEGER), //array of user ids who like the post
         allowNull: false,
         },
        comments: {
-        type: DataTypes.ARRAY, //List of comment IDs associated with the post.
+        type: DataTypes.ARRAY(DataTypes.INTEGER), //List of comment IDs associated with the post.
         allowNull: false,
+        references: {
+          model: "comment",
+          key: "id",
+        },
        }, 
     },
     {

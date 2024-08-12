@@ -10,56 +10,61 @@ class User extends Model {
     return bcrypt.compareSync(loginPw, this.password);
   }
 }
+//Columns for the user
 User.init(
   {
-    //Columns for the user
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
-    },
-    username: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [10, Infinity],
-      },
-    },
-    bio: {
-      type: DataTypes.TEXT, 
-      allowNull: false,
-      max: 250,
-      isAlphanumeric: true,
-    },
-    profile_picture: {
-      type: DataTypes.STRING,
-      //Look up how to build this out? Multer?
-    },
-    favorite_anime: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      isAlphanumeric: true,
-    },
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  username: {
+  type: DataTypes.STRING,
+  allowNull: false,
+ },
+  password: {
+  type: DataTypes.STRING,
+  allowNull: false,
+  validate: {
+    len: [10, Infinity],
+  },
+},
+  bio: {
+  type: DataTypes.TEXT,
+  allowNull: false,
+  validate: {
+    max: 250,
+    isAlphanumeric: true,
+  },
+},
+  //Look up how to build this out? Multer?
+   profile_picture: {
+    type: DataTypes.STRING,
+   },
+    
+   favorite_anime: {
+   type: DataTypes.STRING,
+   allowNull: false,
+   validate: {
+    isAlphanumeric: true,
+   },
+  },
     clan_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-          model: "clan",
-           key: "id",
-         },
-    },
+        model: "clan",
+       key: "id",
+     },
   },
-  {
-    hooks: {
-      beforeCreate: async (newUserData) => {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
+  }, 
+);    
+  
+foreCreate: async (newUserData) => {
+  newUserData.password = await bcrypt.hash(newUserData.password, 10);
+  return newUserData;
+  },
       beforeUpdate: async (updatedUserData) => {
         updatedUserData.password = await bcrypt.hash(
           updatedUserData.password,
@@ -68,10 +73,12 @@ User.init(
         return updatedUserData;
       },
     },
+    {
     sequelize,
     freezeTableName: true,
     underscored: true,
     modelName: "user",
+    },
   }
 );
 

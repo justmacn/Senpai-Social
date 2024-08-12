@@ -13,7 +13,7 @@ class ContentSharing extends Model {
 ContentSharing.init(
 //for sharing anime fan art
     {
-      art_id: {
+      id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
