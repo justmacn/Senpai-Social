@@ -18,12 +18,12 @@ router.get("/", (req, res) => {
 });
 
 // wildcard route
-router.get("*", (req, res) => {
-  try {
-      res.render("404");
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+// router.get("*", (req, res) => {
+//   try {
+//       res.render("404");
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
 
 module.exports = router;
