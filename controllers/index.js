@@ -8,10 +8,10 @@ const profileRoutes = require("./profileRoutes");
 // const marketRoutes = require("./marketRoutes");
 
 // Connect the routes to the router here
-router.use("/", landingRoutes);
 router.use("/api", apiRoutes);
 router.use("/home", homeRoutes);
 router.use("/profile", profileRoutes);
+router.use("/", landingRoutes);
 // router.use("/marketplace", marketRoutes);
 
 module.exports = router;
