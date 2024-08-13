@@ -1,0 +1,73 @@
+[
+    {
+      "name": "Konoha",
+      "bio": "A group for Naruto fans to gather and discuss all things ninja.",
+      "members_id": [1, 2]
+    },
+    {
+      "name": "Shingeki",
+      "bio": "For those who fight against the Titans.",
+      "members_id": [3, 4]
+    },
+    {
+      "name": "Fairy Guild",
+      "bio": "For fans of magic and adventures.",
+      "members_id": [5, 6, 8]
+    },
+    {
+      "name": "Samurai Clan",
+      "bio": "Honoring the way of the warrior.",
+      "members_id": [7]
+    },
+    {
+      "name": "Mecha Legion",
+      "bio": "For those who love giant robots and epic battles.",
+      "members_id": [9, 10]
+    },
+    {
+      "name": "Ghibli Enclave",
+      "bio": "Celebrating the magical world of Studio Ghibli.",
+      "members_id": [11, 12]
+    },
+    {
+      "name": "Cyber Warriors",
+      "bio": "Futuristic and cyberpunk enthusiasts.",
+      "members_id": [13, 14]
+    },
+    {
+      "name": "Pirate Crew",
+      "bio": "Sailing the seas and searching for treasure.",
+      "members_id": [15, 16]
+    },
+    {
+      "name": "Alchemist Circle",
+      "bio": "Following the path of alchemy and equivalent exchange.",
+      "members_id": [17, 18]
+    },
+    {
+      "name": "Magic Order",
+      "bio": "Wielders of magic and keepers of ancient secrets.",
+      "members_id": [19, 20]
+    },
+    {
+      "name": "Space Cowboys",
+      "bio": "Exploring the stars and chasing bounties.",
+      "members_id": [21, 22]
+    },
+    {
+      "name": "Vampire Coven",
+      "bio": "Rulers of the night and guardians of the dark.",
+      "members_id": [23, 24]
+    },
+    {
+      "name": "Monster Tamers",
+      "bio": "Taming and training monsters of all kinds.",
+      "members_id": [25, 26]
+    },
+    {
+      "name": "Galactic Warriors",
+      "bio": "Fighting in the vastness of space.",
+      "members_id": [27, 28, 29]
+    }
+  ]
+  

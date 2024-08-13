@@ -37,22 +37,14 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // clan_id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true,
-    //   references: {
-    //     model: "clan",
-    //     key: "id",
-    //   },
-    // },
-    friends: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
+    clan_id: {
+      type: DataTypes.INTEGER,
       allowNull: true,
       references: {
-        model: "user",
+        model: "clan",
         key: "id",
-      }
-    }
+      },
+    },
   },
   {  // options
     hooks: {
