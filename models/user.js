@@ -45,14 +45,14 @@ User.init(
     //     key: "id",
     //   },
     // },
-    friends: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-      allowNull: true,
-      references: {
-        model: "user",
-        key: "id",
-      }
-    }
+    // friends: {
+    //   type: DataTypes.ARRAY(DataTypes.STRING),
+    //   allowNull: true,
+    //   references: {
+    //     model: "user",
+    //     key: "id",
+    //   }
+    // }
   },
   {  // options
     hooks: {

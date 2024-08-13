@@ -1,6 +1,6 @@
 // import all models here
 const User = require("./User");
-const Clan = require("./clan");
+// const Clan = require("./clan");
 const Post = require("./Post");
 // const Friends = require("./friends");
 // const Feed = require("./feed");
@@ -26,7 +26,7 @@ Post.belongsTo(User, { foreignKey: 'author_id' });
 
 
 // clan association
-Clan.hasMany(User, { foreignKey: 'member_id' });
+// Clan.hasMany(User, { foreignKey: 'member_id' });
 // Clan.hasMany(Post, { foreignKey: 'post_id' });
 
 
