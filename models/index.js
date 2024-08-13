@@ -1,8 +1,8 @@
 // import all models here
 // <<<<<<< profile-routes
-const User = require("./User");
+
 // const Clan = require("./clan");
-const Post = require("./Post");
+
 // =======
 const User = require("./user");
 // const Clan = require("./clan");
