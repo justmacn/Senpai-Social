@@ -1,0 +1,38 @@
+/* Ensure html and body cover the full viewport height */
+html, body {
+    height: 100% !important; /* Full height of the viewport */
+    margin: 0 !important; /* Remove default margins */
+    padding: 0 !important; /* Remove default padding */
+  }
+  
+  /* Body background styling */
+  body {
+    background-image: url('/images/anime_collage.jpg') !important; /* Path to your background image */
+    background-size: cover !important; /* Ensures the image covers the entire background */
+    background-position: center !important; /* Centers the image */
+    background-repeat: no-repeat !important; /* Prevents the image from repeating */
+    background-attachment: fixed !important; /* Fixes the image in place when scrolling */
+  }
+  
+  /* Center the card and style it */
+  #hm-social-card {
+    margin: 50px auto; /* Centers the card horizontally */
+    max-width: 840px; /* Limits the width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+    border-radius: 12px; /* Rounds the corners slightly */
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+    position: relative; /* Required for positioning within the card */
+  }
+  
+  /* Style for the image inside the card */
+  #hm-social-card img {
+    width: 100%; /* Ensures the image fits the card width */
+    height: auto; /* Maintains the image aspect ratio */
+    border-radius: 12px; /* Matches the card’s corner radius */
+  }
+  
+  /* Hover effect for the card */
+  #hm-social-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
+  }
+  

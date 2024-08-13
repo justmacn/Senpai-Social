@@ -22,6 +22,7 @@ router.get("/", withGuard, async (req, res) => {
 
     const feed = postData.map((post) => post.get({ plain: true }));
 
+
     // console.log(feed);
     res.render("home", {
       feed,
@@ -35,10 +36,3 @@ router.get("/", withGuard, async (req, res) => {
 });
 
 module.exports = router;
-
-
-
-
-
-
-
