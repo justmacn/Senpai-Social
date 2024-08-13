@@ -1,8 +1,28 @@
 <div>
   {{! Reminder: userExamples comes from the data being passed in the res.render on pageOneRoutes.js! }}
-  
-    <div>Welcome to the profile page!</div>
 
-  
+  <div>Welcome to the profile page!</div>
+  <div class="flexbox-turnon">
+    {{!-- profile image --}}
+    <img src={{user.profile_picture}} class="rounded float-left img-fluid" alt="...">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+         {{user.username}}
+        <span class="badge badge-primary badge-pill">14</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+{{user.bio}}        <span class="badge badge-primary badge-pill">2</span>
+      </li>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        {{favorite_anime}}
+        <span class="badge badge-primary badge-pill">1</span>
+      </li>
+    </ul>
+  </div>
+  {{!-- posts? --}}
+  {{#each posts}}
+  {{!-- partial for posts --}}
+  {{> posts}}
+  {{/each}}
 </div>
 <script src="/js/page-one.js"></script>

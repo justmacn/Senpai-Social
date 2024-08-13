@@ -1,28 +1,35 @@
 const router = require("express").Router();
 
 // import any models you plan to use for this page's routes here
-const { User } = require("../models");
+const { User, Post } = require("../models");
 
 // protects routes from unauthorized access
 const { withGuard } = require("../utils/authGuard");
 
 router.get("/", withGuard, async (req, res) => {
   try {
-    const data = await User.findAll({
+    const userData = await User.findByPk(
       // Reminder- this is how you filter data by user_id
+      req.session.user_id,
+      
+    );
+    const postData = await Post.findAll({
       where: {
-        id: req.session.user_id,
+        author_id: req.session.user_id,
       },
     });
+
+    const posts = postData.map((post) => post.get({ plain: true }));
     
-    const user = data.get({ plain: true })
-    console.log("plain user", user)
     
+    const user = userData.get({ plain: true })
+    console.log(posts)
+    console.log(user)
     // Reminder- We're passing the userExamples data to the page-one handlebars template here!
     // Reminder- We're also passing the loggedIn status to the page-one handlebars template here so that we can conditionally render items if the user is logged in or not.
     res.render("profile", {
       user,
-      loggedIn: req.session.logged_in,
+      posts,
     });
   } catch (err) {
     res.status(500).json(err);
