@@ -1,7 +1,13 @@
 // import all models here
+// <<<<<<< profile-routes
+const User = require("./User");
+// const Clan = require("./clan");
+const Post = require("./Post");
+// =======
 const User = require("./user");
-const Clan = require("./clan");
+// const Clan = require("./clan");
 const Post = require("./post");
+// >>>>>>> main
 // const Friends = require("./friends");
 // const Feed = require("./feed");
 // const Anime = require("./anime");
@@ -26,7 +32,7 @@ Post.belongsTo(User, { foreignKey: 'author_id' });
 
 
 // clan association
-Clan.hasMany(User, { foreignKey: 'member_id' });
+// Clan.hasMany(User, { foreignKey: 'member_id' });
 // Clan.hasMany(Post, { foreignKey: 'post_id' });
 
 
