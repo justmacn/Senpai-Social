@@ -22,6 +22,8 @@ router.get("/", withGuard, async (req, res) => {
 
     const feed = posts.map((post) => post.get({ plain: true }));
 
+
+    // console.log(feed);
     res.render("home", {
       feed,
       loggedIn: req.session.logged_in,
@@ -30,6 +32,7 @@ router.get("/", withGuard, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+
 });
 
 module.exports = router;
