@@ -3,7 +3,7 @@
     "username": "AnimeLover92",
     "password": "SuperSecretPassword123",
     "bio": "Anime enthusiast and aspiring manga artist.",
-    "profile_picture": "https://example.com/profile1.jpg",
+    "profile_picture": "/images/anime_image_1.png",
     "favorite_anime": "Naruto",
     "clan_id": 1
   },
@@ -11,7 +11,7 @@
     "username": "ShonenWarrior",
     "password": "AnotherSuperSecretPassword456",
     "bio": "All about shonen and action-packed adventures.",
-    "profile_picture": "https://example.com/profile2.jpg",
+    "profile_picture": "/images/anime_image_2.png",
     "favorite_anime": "Attack on Titan",
     "clan_id": 1
   },
@@ -19,7 +19,7 @@
     "username": "MysticMage",
     "password": "MagicRocks789",
     "bio": "Fantasy and magic worlds are my thing.",
-    "profile_picture": "https://example.com/profile3.jpg",
+    "profile_picture": "/images/anime_image_3.png",
     "favorite_anime": "Fairy Tail",
     "clan_id": 2
   },
@@ -27,7 +27,7 @@
     "username": "SamuraiSoul",
     "password": "HonorAndBlade123",
     "bio": "Samurai and warrior anime fan.",
-    "profile_picture": "https://example.com/profile4.jpg",
+    "profile_picture": "/images/anime_image_5.png",
     "favorite_anime": "Rurouni Kenshin",
     "clan_id": 2
   },
@@ -35,7 +35,7 @@
     "username": "MechaPilot",
     "password": "GiantRobotsFTW456",
     "bio": "Mecha anime is the best genre, hands down.",
-    "profile_picture": "https://example.com/profile5.jpg",
+    "profile_picture": "/images/anime_image_6.png",
     "favorite_anime": "Gundam",
     "clan_id": 3
   },
@@ -43,7 +43,7 @@
     "username": "GhibliDreamer",
     "password": "GhibliMagic789",
     "bio": "Living in a Ghibli dream world.",
-    "profile_picture": "https://example.com/profile6.jpg",
+    "profile_picture": "/images/anime_image_1.png",
     "favorite_anime": "Spirited Away",
     "clan_id": 3
   },
@@ -51,7 +51,7 @@
     "username": "CyberNinja",
     "password": "TechBlade123",
     "bio": "Futuristic settings and cyberpunk vibes.",
-    "profile_picture": "https://example.com/profile7.jpg",
+    "profile_picture": "/images/anime_image_2.png",
     "favorite_anime": "Ghost in the Shell",
     "clan_id": 4
   },
@@ -59,176 +59,177 @@
     "username": "PirateKing",
     "password": "OnePieceTreasure456",
     "bio": "On a quest to find the One Piece.",
-    "profile_picture": "https://example.com/profile8.jpg",
+    "profile_picture": "/images/anime_image_3.png",
     "favorite_anime": "One Piece",
     "clan_id": 3
   },
-  {
-    "username": "AlchemistSage",
-    "password": "EquivalentExchange789",
-    "bio": "Following the path of the alchemist.",
-    "profile_picture": "https://example.com/profile9.jpg",
-    "favorite_anime": "Fullmetal Alchemist",
-    "clan_id": 5
-  },
-  {
-    "username": "Titanslayer",
-    "password": "WallMaria123",
-    "bio": "Defending humanity from Titans.",
-    "profile_picture": "https://example.com/profile10.jpg",
-    "favorite_anime": "Attack on Titan",
-    "clan_id": 5
-  },
-  {
-    "username": "DarkWizard",
-    "password": "AbyssMagic456",
-    "bio": "Master of dark and arcane arts.",
-    "profile_picture": "https://example.com/profile11.jpg",
-    "favorite_anime": "Black Clover",
-    "clan_id": 6
-  },
-  {
-    "username": "SpeedStar",
-    "password": "GottaGoFast789",
-    "bio": "Speed is life, racing through everything.",
-    "profile_picture": "https://example.com/profile12.jpg",
-    "favorite_anime": "Initial D",
-    "clan_id": 6
-  },
-  {
-    "username": "DragonBorn",
-    "password": "FireAndScales123",
-    "bio": "Dragons are the epitome of power.",
-    "profile_picture": "https://example.com/profile13.jpg",
-    "favorite_anime": "Dragon Ball Z",
-    "clan_id": 7
-  },
-  {
-    "username": "SwordMaster",
-    "password": "BladeDance456",
-    "bio": "Sharpened steel and keen instincts.",
-    "profile_picture": "https://example.com/profile14.jpg",
-    "favorite_anime": "Bleach",
-    "clan_id": 7
-  },
-  {
-    "username": "NinjaShadow",
-    "password": "SilentStrike789",
-    "bio": "Living in the shadows, striking swiftly.",
-    "profile_picture": "https://example.com/profile15.jpg",
-    "favorite_anime": "Naruto",
-    "clan_id": 8
-  },
-  {
-    "username": "KnightOfValor",
-    "password": "ShieldAndSword123",
-    "bio": "Honor and valor guide my path.",
-    "profile_picture": "https://example.com/profile16.jpg",
-    "favorite_anime": "Fate/Stay Night",
-    "clan_id": 8
-  },
-  {
-    "username": "DemonHunter",
-    "password": "ExorcistBlade456",
-    "bio": "Hunting demons is my calling.",
-    "profile_picture": "https://example.com/profile17.jpg",
-    "favorite_anime": "Demon Slayer",
-    "clan_id": 9
-  },
-  {
-    "username": "SpiritGuide",
-    "password": "YokaiWhisper789",
-    "bio": "Connecting with the spiritual realm.",
-    "profile_picture": "https://example.com/profile18.jpg",
-    "favorite_anime": "Natsume's Book of Friends",
-    "clan_id": 9
-  },
-  {
-    "username": "TechGenius",
-    "password": "HackThePlanet123",
-    "bio": "Technology is the future, and I control it.",
-    "profile_picture": "https://example.com/profile19.jpg",
-    "favorite_anime": "Steins;Gate",
-    "clan_id": 10
-  },
-  {
-    "username": "SpaceExplorer",
-    "password": "BeyondTheStars456",
-    "bio": "The final frontier calls to me.",
-    "profile_picture": "https://example.com/profile20.jpg",
-    "favorite_anime": "Cowboy Bebop",
-    "clan_id": 10
-  },
-  {
-    "username": "HeroOfJustice",
-    "password": "TruthAndJustice789",
-    "bio": "Justice and truth are my guiding lights.",
-    "profile_picture": "https://example.com/profile21.jpg",
-    "favorite_anime": "My Hero Academia",
-    "clan_id": 11
-  },
-  {
-    "username": "VampireLord",
-    "password": "EternalNight123",
-    "bio": "Ruler of the night and all its secrets.",
-    "profile_picture": "https://example.com/profile22.jpg",
-    "favorite_anime": "Hellsing",
-    "clan_id": 11
-  },
-  {
-    "username": "AlienHunter",
-    "password": "Xenomorphs456",
-    "bio": "Protecting Earth from extraterrestrial threats.",
-    "profile_picture": "https://example.com/profile23.jpg",
-    "favorite_anime": "Parasyte",
-    "clan_id": 12
-  },
-  {
-    "username": "ShadowAssassin",
-    "password": "SwiftStrike789",
-    "bio": "Precision and stealth are my allies.",
-    "profile_picture": "https://example.com/profile24.jpg",
-    "favorite_anime": "Assassination Classroom",
-    "clan_id": 12
-  },
-  {
-    "username": "BattleMage",
-    "password": "ArcaneFire123",
-    "bio": "Combining magic and combat for ultimate power.",
-    "profile_picture": "https://example.com/profile25.jpg",
-    "favorite_anime": "Magi",
-    "clan_id": 13
-  },
-  {
-    "username": "MonsterTamer",
-    "password": "SummonThemAll456",
-    "bio": "Monsters are my friends, not foes.",
-    "profile_picture": "https://example.com/profile26.jpg",
-    "favorite_anime": "Pokémon",
-    "clan_id": 13
-  },
-  {
-    "username": "AlienWarrior",
-    "password": "GalacticFight789",
-    "bio": "Fighting in the vastness of space.",
-    "profile_picture": "https://example.com/profile27.jpg",
-    "favorite_anime": "Dragon Ball Super",
-    "clan_id": 14
-  },
-  {
-    "username": "TimeTraveler",
-    "password": "TemporalShift123",
-    "bio": "Exploring different timelines and alternate realities.",
-    "profile_picture": "https://example.com/profile28.jpg",
-    "favorite_anime": "Re:Zero",
-    "clan_id": 14
-  },
-  {
-    "username": "WizardKing",
-    "password": "MagicReigns456",
-    "bio": "The ultimate magic user, ruling over all.",
-    "profile_picture": "https://example.com/profile29",
-    "favorite_anime": "That Time I Reincarnated As Slime",
-    "clan_id": 14
-  }
+    {
+      "username": "AlchemistSage",
+      "password": "EquivalentExchange789",
+      "bio": "Following the path of the alchemist.",
+      "profile_picture": "/images/anime_image_1.png",
+      "favorite_anime": "Fullmetal Alchemist",
+      "clan_id": 5
+    },
+    {
+      "username": "Titanslayer",
+      "password": "WallMaria123",
+      "bio": "Defending humanity from Titans.",
+      "profile_picture": "/images/anime_image_2.png",
+      "favorite_anime": "Attack on Titan",
+      "clan_id": 5
+    },
+    {
+      "username": "DarkWizard",
+      "password": "AbyssMagic456",
+      "bio": "Master of dark and arcane arts.",
+      "profile_picture": "/images/anime_image_3.png",
+      "favorite_anime": "Black Clover",
+      "clan_id": 6
+    },
+    {
+      "username": "SpeedStar",
+      "password": "GottaGoFast789",
+      "bio": "Speed is life, racing through everything.",
+      "profile_picture": "/images/anime_image_5.png",
+      "favorite_anime": "Initial D",
+      "clan_id": 6
+    },
+    {
+      "username": "DragonBorn",
+      "password": "FireAndScales123",
+      "bio": "Dragons are the epitome of power.",
+      "profile_picture": "/images/anime_image_6.png",
+      "favorite_anime": "Dragon Ball Z",
+      "clan_id": 7
+    },
+    {
+      "username": "SwordMaster",
+      "password": "BladeDance456",
+      "bio": "Sharpened steel and keen instincts.",
+      "profile_picture": "/images/anime_image_1.png",
+      "favorite_anime": "Bleach",
+      "clan_id": 7
+    },
+    {
+      "username": "NinjaShadow",
+      "password": "SilentStrike789",
+      "bio": "Living in the shadows, striking swiftly.",
+      "profile_picture": "/images/anime_image_2.png",
+      "favorite_anime": "Naruto",
+      "clan_id": 8
+    },
+    {
+      "username": "KnightOfValor",
+      "password": "ShieldAndSword123",
+      "bio": "Honor and valor guide my path.",
+      "profile_picture": "/images/anime_image_3.png",
+      "favorite_anime": "Fate/Stay Night",
+      "clan_id": 8
+    },
+      {
+        "username": "DemonHunter",
+        "password": "ExorcistBlade456",
+        "bio": "Hunting demons is my calling.",
+        "profile_picture": "/images/anime_image_1.png",
+        "favorite_anime": "Demon Slayer",
+        "clan_id": 9
+      },
+      {
+        "username": "SpiritGuide",
+        "password": "YokaiWhisper789",
+        "bio": "Connecting with the spiritual realm.",
+        "profile_picture": "/images/anime_image_2.png",
+        "favorite_anime": "Natsume's Book of Friends",
+        "clan_id": 9
+      },
+      {
+        "username": "TechGenius",
+        "password": "HackThePlanet123",
+        "bio": "Technology is the future, and I control it.",
+        "profile_picture": "/images/anime_image_3.png",
+        "favorite_anime": "Steins;Gate",
+        "clan_id": 10
+      },
+      {
+        "username": "SpaceExplorer",
+        "password": "BeyondTheStars456",
+        "bio": "The final frontier calls to me.",
+        "profile_picture": "/images/anime_image_5.png",
+        "favorite_anime": "Cowboy Bebop",
+        "clan_id": 10
+      },
+      {
+        "username": "HeroOfJustice",
+        "password": "TruthAndJustice789",
+        "bio": "Justice and truth are my guiding lights.",
+        "profile_picture": "/images/anime_image_6.png",
+        "favorite_anime": "My Hero Academia",
+        "clan_id": 11
+      },
+      {
+        "username": "VampireLord",
+        "password": "EternalNight123",
+        "bio": "Ruler of the night and all its secrets.",
+        "profile_picture": "/images/anime_image_1.png",
+        "favorite_anime": "Hellsing",
+        "clan_id": 11
+      },
+      {
+        "username": "AlienHunter",
+        "password": "Xenomorphs456",
+        "bio": "Protecting Earth from extraterrestrial threats.",
+        "profile_picture": "/images/anime_image_2.png",
+        "favorite_anime": "Parasyte",
+        "clan_id": 12
+      },
+      {
+        "username": "ShadowAssassin",
+        "password": "SwiftStrike789",
+        "bio": "Precision and stealth are my allies.",
+        "profile_picture": "/images/anime_image_3.png",
+        "favorite_anime": "Assassination Classroom",
+        "clan_id": 12
+      },
+      {
+        "username": "BattleMage",
+        "password": "ArcaneFire123",
+        "bio": "Combining magic and combat for ultimate power.",
+        "profile_picture": "/images/anime_image_5.png",
+        "favorite_anime": "Magi",
+        "clan_id": 13
+      },
+        {
+          "username": "MonsterTamer",
+          "password": "SummonThemAll456",
+          "bio": "Monsters are my friends, not foes.",
+          "profile_picture": "/images/anime_image_1.png",
+          "favorite_anime": "Pokémon",
+          "clan_id": 13
+        },
+        {
+          "username": "AlienWarrior",
+          "password": "GalacticFight789",
+          "bio": "Fighting in the vastness of space.",
+          "profile_picture": "/images/anime_image_2.png",
+          "favorite_anime": "Dragon Ball Super",
+          "clan_id": 14
+        },
+        {
+          "username": "TimeTraveler",
+          "password": "TemporalShift123",
+          "bio": "Exploring different timelines and alternate realities.",
+          "profile_picture": "/images/anime_image_3.png",
+          "favorite_anime": "Re:Zero",
+          "clan_id": 14
+        },
+        {
+          "username": "WizardKing",
+          "password": "MagicReigns456",
+          "bio": "The ultimate magic user, ruling over all.",
+          "profile_picture": "/images/anime_image_5.png",
+          "favorite_anime": "That Time I Reincarnated As Slime",
+          "clan_id": 14
+        }
+      
 ]

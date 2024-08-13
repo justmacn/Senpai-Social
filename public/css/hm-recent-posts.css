@@ -1,0 +1,9 @@
+/* Center the recent posts card on the page */
+#recent-posts-card {
+    margin: 50px auto; /* Centers the card horizontally */
+    padding-top: 20px; /* Adds padding from the header */
+    max-width: 540px; /* Limits the width */
+    display: block;
+  }
+
+  
