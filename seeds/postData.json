@@ -1,0 +1,188 @@
+[
+  {
+    "author_id": 20,
+    "text": "My Hero Academia's latest episode was full of intense action.",
+    "image": "",
+    "anime_title": "My Hero Academia"
+  },
+  {
+    "author_id": 7,
+    "text": "The philosophical depth in Ghost in the Shell is truly thought-provoking.",
+    "image": "https://example.com/post16.jpg",
+    "anime_title": "Ghost in the Shell"
+  },
+  {
+    "author_id": 3,
+    "text": "Lucy Heartfilia is one of my favorite characters. Such a great journey.",
+    "image": "",
+    "anime_title": "Fairy Tail"
+  },
+  {
+    "author_id": 9,
+    "text": "Fullmetal Alchemist's storyline is so intricate and well-developed.",
+    "image": "https://example.com/post5.jpg",
+    "anime_title": "Fullmetal Alchemist"
+  },
+  {
+    "author_id": 26,
+    "text": "Re:Zero's plot twists are always so unexpected.",
+    "image": "",
+    "anime_title": "Re:Zero"
+  },
+  {
+    "author_id": 1,
+    "text": "The development of Naruto as a character is remarkable.",
+    "image": "",
+    "anime_title": "Naruto"
+  },
+  {
+    "author_id": 27,
+    "text": "Great battles and character development in Dragon Ball Z.",
+    "image": "",
+    "anime_title": "Dragon Ball Z"
+  },
+  {
+    "author_id": 14,
+    "text": "The Naruto vs Sasuke battle was epic. Truly unforgettable.",
+    "image": "",
+    "anime_title": "Naruto Shippuden"
+  },
+  {
+    "author_id": 12,
+    "text": "Initial D is a great throwback to street racing culture.",
+    "image": "https://example.com/post6.jpg",
+    "anime_title": "Initial D"
+  },
+  {
+    "author_id": 8,
+    "text": "One Piece keeps getting better and better with each arc.",
+    "image": "",
+    "anime_title": "One Piece"
+  },
+  {
+    "author_id": 13,
+    "text": "Bleach's character designs and abilities are so cool.",
+    "image": "",
+    "anime_title": "Bleach"
+  },
+  {
+    "author_id": 20,
+    "text": "Deku's growth as a hero is one of the highlights of My Hero Academia.",
+    "image": "https://example.com/post18.jpg",
+    "anime_title": "My Hero Academia"
+  },
+  {
+    "author_id": 4,
+    "text": "Rurouni Kenshin is a classic. The sword fights are top-notch.",
+    "image": "",
+    "anime_title": "Rurouni Kenshin"
+  },
+  {
+    "author_id": 26,
+    "text": "The emotional depth in Re:Zero is both heart-wrenching and compelling.",
+    "image": "https://example.com/post19.jpg",
+    "anime_title": "Re:Zero"
+  },
+  {
+    "author_id": 7,
+    "text": "The cyberpunk setting in Ghost in the Shell is a visual masterpiece.",
+    "image": "",
+    "anime_title": "Ghost in the Shell"
+  },
+  {
+    "author_id": 6,
+    "text": "Spirited Away is pure magic. Every frame is a work of art.",
+    "image": "",
+    "anime_title": "Spirited Away"
+  },
+  {
+    "author_id": 2,
+    "text": "Attack on Titan never fails to amaze me with its intense action.",
+    "image": "",
+    "anime_title": "Attack on Titan"
+  },
+  {
+    "author_id": 15,
+    "text": "Fate/Stay Night is full of thrilling action and complex characters.",
+    "image": "",
+    "anime_title": "Fate/Stay Night"
+  },
+  {
+    "author_id": 1,
+    "text": "Just finished watching the latest episode of Naruto. Incredible!",
+    "image": "https://example.com/post1.jpg",
+    "anime_title": "Naruto"
+  },
+  {
+    "author_id": 5,
+    "text": "Gundam series always gets me hyped with its mecha battles.",
+    "image": "https://example.com/post3.jpg",
+    "anime_title": "Gundam"
+  },
+  {
+    "author_id": 3,
+    "text": "Just started watching the latest season of Fairy Tail. It's amazing!",
+    "image": "https://example.com/post15.jpg",
+    "anime_title": "Fairy Tail"
+  },
+  {
+    "author_id": 10,
+    "text": "The world-building in Attack on Titan is phenomenal.",
+    "image": "",
+    "anime_title": "Attack on Titan"
+  },
+  {
+    "author_id": 22,
+    "text": "Parasyte offers a unique take on the alien invasion genre.",
+    "image": "https://example.com/post11.jpg",
+    "anime_title": "Parasyte"
+  },
+  {
+    "author_id": 8,
+    "text": "Sailing the seas and searching for treasure.",
+    "image": "",
+    "anime_title": "One Piece"
+  },
+  {
+    "author_id": 19,
+    "text": "Cowboy Bebop is a timeless classic with a fantastic soundtrack.",
+    "image": "",
+    "anime_title": "Cowboy Bebop"
+  },
+  {
+    "author_id": 4,
+    "text": "Samurai Champloo is a must-watch for any anime fan.",
+    "image": "https://example.com/post20.jpg",
+    "anime_title": "Samurai Champloo"
+  },
+  {
+    "author_id": 11,
+    "text": "Black Clover's magic system is incredibly unique and engaging.",
+    "image": "",
+    "anime_title": "Black Clover"
+  },
+  {
+    "author_id": 14,
+    "text": "The character development in Naruto Shippuden is incredible.",
+    "image": "https://example.com/post17.jpg",
+    "anime_title": "Naruto Shippuden"
+  },
+  {
+    "author_id": 18,
+    "text": "Steins;Gate is a must-watch for fans of time travel and sci-fi.",
+    "image": "https://example.com/post9.jpg",
+    "anime_title": "Steins;Gate"
+  },
+  {
+    "author_id": 5,
+    "text": "For those who love giant robots and epic battles.",
+    "image": "",
+    "anime_title": "Gundam"
+  },
+  {
+    "author_id": 6,
+    "text": "Celebrating the magical world of Studio Ghibli.",
+    "image": "",
+    "anime_title": "Spirited Away"
+  }
+]

@@ -1,7 +1,7 @@
 // import all models here
-const User = require("./User");
+const User = require("./user");
 const Clan = require("./clan");
-const Post = require("./Post");
+const Post = require("./post");
 // const Friends = require("./friends");
 // const Feed = require("./feed");
 // const Anime = require("./anime");
