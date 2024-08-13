@@ -1,39 +1,23 @@
-<div>
-    {{!-- Reminder: examples comes from the data being passed in the res.render on homeRoutes.js! --}}
-
-<div class="card text-center">
-  <div class="card-header">
-    SenpaiSocial
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-  <div class="card-footer text-body-secondary">
-    2 days ago
-  </div>
-</div>
-
-  {{#each feed}}
-  {{!-- Reminder- this is a partial! Handlebars will render the code located in items.handlebars in the /partials/ directory! --}}
-
-    {{>posts}}
-  {{/each}}
-
-</div>
-
-{{!-- <div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/hm-social-card.css"> 
+</head>
+<body>
   <div>
-    <h2>Create New Message</h2>
+    
+    <div class="card text-center" id="hm-social-card">
+      <a href="/profile">
+        <img src="/images/anime.jpg" alt="Backsplash Image">
+      </a>
+    </div>
+    {{#each feed}}
+      {{!-- Include partial for posts --}}
+      {{>posts}}
+    {{/each}}
   </div>
-  <form id="new-data-form">
-    <label for="data-message">Message</label>
-    <textarea name="data-message" ></textarea>
-
-    <button type="submit">Create</button>
-  </form>
-</div> --}}
-
-
-<script src="/js/newData.js"></script>
+  <script src="/js/newData.js"></script>
+</body>
+</html>

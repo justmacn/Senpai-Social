@@ -1,9 +1,15 @@
 /* Center the recent posts card on the page */
 #recent-posts-card {
-    margin: 50px auto; /* Centers the card horizontally */
-    padding-top: 20px; /* Adds padding from the header */
-    max-width: 540px; /* Limits the width */
-    display: block;
-  }
+  margin: 50px auto; /* Centers the card horizontally */
+  padding-top: 20px; /* Adds padding from the header */
+  max-width: 540px; /* Limits the width */
+  display: block;
+  border-radius: 12px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Default shadow */
+  transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+}
 
-  
+/* Hover effect for the card */
+#recent-posts-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Glow effect */
+}
