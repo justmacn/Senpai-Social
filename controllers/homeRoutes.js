@@ -10,6 +10,7 @@ const { withGuard } = require("../utils/authGuard");
 router.get("/", withGuard, async (req, res) => {
   try {
     const postData = await Post.findAll({
+      limit:3, 
       include: [
         {
           model: User,
@@ -18,9 +19,9 @@ router.get("/", withGuard, async (req, res) => {
       ]
     });
 
-    const posts = postData.slice(-5);
+    // const posts = postData.slice(-3);
 
-    const feed = posts.map((post) => post.get({ plain: true }));
+    const feed = postData.map((post) => post.get({ plain: true }));
 
 
     // console.log(feed);
