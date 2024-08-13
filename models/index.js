@@ -1,7 +1,13 @@
 // import all models here
+// <<<<<<< profile-routes
 const User = require("./User");
 // const Clan = require("./clan");
 const Post = require("./Post");
+// =======
+const User = require("./user");
+// const Clan = require("./clan");
+const Post = require("./post");
+// >>>>>>> main
 // const Friends = require("./friends");
 // const Feed = require("./feed");
 // const Anime = require("./anime");

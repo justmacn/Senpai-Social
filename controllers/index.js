@@ -5,13 +5,13 @@ const landingRoutes = require("./landingRoutes");
 const apiRoutes = require("./api/");
 const homeRoutes = require("./homeRoutes");
 const profileRoutes = require("./profileRoutes");
-const marketRoutes = require("./marketRoutes");
+// const marketRoutes = require("./marketRoutes");
 
 // Connect the routes to the router here
 router.use("/", landingRoutes);
 router.use("/api", apiRoutes);
 router.use("/home", homeRoutes);
 router.use("/profile", profileRoutes);
-router.use("/marketplace", marketRoutes);
+// router.use("/marketplace", marketRoutes);
 
 module.exports = router;

@@ -37,22 +37,33 @@ User.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    // clan_id: {
-    //   type: DataTypes.INTEGER,
-    //   allowNull: true,
-    //   references: {
-    //     model: "clan",
-    //     key: "id",
-    //   },
-    // },
-    // friends: {
-    //   type: DataTypes.ARRAY(DataTypes.STRING),
-    //   allowNull: true,
-    //   references: {
-    //     model: "user",
-    //     key: "id",
-    //   }
-    // }
+// <<<<<<< profile-routes
+//     // clan_id: {
+//     //   type: DataTypes.INTEGER,
+//     //   allowNull: true,
+//     //   references: {
+//     //     model: "clan",
+//     //     key: "id",
+//     //   },
+//     // },
+//     // friends: {
+//     //   type: DataTypes.ARRAY(DataTypes.STRING),
+//     //   allowNull: true,
+//     //   references: {
+//     //     model: "user",
+//     //     key: "id",
+//     //   }
+//     // }
+// =======
+// //     clan_id: {
+// //       type: DataTypes.INTEGER,
+// //       allowNull: true,
+// //       references: {
+// //         model: "clan",
+// //         key: "id",
+// //       },
+//     },
+// >>>>>>> main
   },
   {  // options
     hooks: {

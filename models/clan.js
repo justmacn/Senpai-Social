@@ -36,7 +36,7 @@ Clan.init(
       },
     }, 
     // Holds ID of clan members  
-    member_id: {
+    members_id: {
       type: DataTypes.ARRAY(DataTypes.INTEGER),
       allowNull: false,
       references: {
