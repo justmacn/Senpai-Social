@@ -4,7 +4,9 @@ const sequelize = require("../config/connection");
 const { User, Post } = require("../models");
 
 // Reminder- import any data you want to seed here
+
 const postData = require("./postData.json");
+
 const userData = require("./userData.json");
 
 const seedDatabase = async () => {
@@ -20,11 +22,13 @@ const seedDatabase = async () => {
   console.log("Users created");
 
   // bulkCreate example data
+
   await Post.bulkCreate(postData, {
     individualHooks: true,
     returning: true,
   });
   console.log("Post data created");
+
 
   // Reminder- add any other models you want to seed here
 
