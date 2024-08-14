@@ -12,7 +12,7 @@ router.get("/", withGuard, async (req, res) => {
     const userData = await User.findByPk(
       // Reminder- this is how you filter data by user_id
       req.session.user_id,
-      
+
     );
     const postData = await Post.findAll({
       limit: 3,
@@ -29,10 +29,10 @@ router.get("/", withGuard, async (req, res) => {
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-    
+
     const user = userData.get({ plain: true })
 
-   res.render("profile", {
+    res.render("profile", {
       user,
       posts,
       loggedIn: req.session.logged_in,
@@ -41,23 +41,42 @@ router.get("/", withGuard, async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
- });
+});
+
+// route to send user to edit profile page
+router.get("/edit-user", withGuard, async (req, res) => {
+  try {
+    // users still logged in will be redirected to home page instead of login page
+    const user = await req.session.username
+
+    if (req.session.logged_in && user) {
+      res.render("edit", {
+        loggedIn: req.session.logged_in,
+        username: req.session.username,
+      })
+    } else {
+      res.render("/");
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // route to edit user profile
 router.put("/edit", withGuard, async (req, res) => {
   try {
     const { username, password, bio, profile_picture, favorite_anime } = req.body;
     const [updated] = await databyUser.update(
-      { username, password, bio, profile_picture, favorite_anime }, 
-      {where: { user_id: req.session.user_id } }
+      { username, password, bio, profile_picture, favorite_anime },
+      { where: { user_id: req.session.user_id } }
     );
     if (updated) {
       res.status(200).json({ message: 'Profile updated successfully' });
     } else {
-      res.status(404).json({ message: 'User not found' }); 
+      res.status(404).json({ message: 'User not found' });
     }
-   } catch (err) {
-     res.status(500).json(err);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 //delete profile route
