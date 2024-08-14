@@ -240,3 +240,24 @@
     object-fit: cover;
     z-index: 1; /* Ensure video is behind the form and overlay */
 }
+
+/* Login & Signup Button Hover Effect */
+#signUp:hover{
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
+}
+
+#login-btn:hover{
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
+}
+
+#signIn:hover{
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
+}
+
+#signup-btn:hover{
+    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
+}
