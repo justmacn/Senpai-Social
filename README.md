@@ -66,6 +66,11 @@
 
 <!-- TODO: add your screenshots or demo videos here -->
 <!-- Add screenshots using the following format: -->
+![Landing page where user logs in/signs up](./public/images/Screen%20Shot%202024-08-14%20at%2012.40.01%20PM.png)
+![Social feed page where user can see most recent posts](./public/images/Screen%20Shot%202024-08-14%20at%2012.50.21%20PM.png)
+![Social feed 2](./public/images/Screen%20Shot%202024-08-14%20at%2012.53.19%20PM.png)
+![User-profile page](./public/images/image.png)
+![User-edit page]()
 <!-- ![Screenshot alt description](directPathOfScreenshots) -->
 <!-- Add video demos using the following format: -->
 <!-- ![Video alt description](directPathOfVideos) -->
@@ -144,6 +149,15 @@ npm run start
 ## Roadmap
 
 <!-- TODO: Plan out rough roadmap here -->
+ 1. A user is taken to the login/signup page, where they can log in or create an account.
+
+ 2. When a user logs in or creates an account, they are taken to a home page where they see a social feed with the five most recent posts of their friends. 
+
+ 3. A user can use a drop-down menu to view their profile. 
+
+ 4. When a user is taken to their profile, they see a page that features their profile avatar, a short bio, and a feed where they can create a post. The can feature text and photo. 
+
+ 5. A user can also use the drop-down menu to edit their profile and change their avatar, bio or delete their profile.
 
 #### MVP
 
