@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="/css/profile-page.css">
 
-<div class="container mt-5">
-    <div class="row">
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="row justify-content-center">
         <!-- Profile Avatar Card -->
-        <div class="col-md-4">
+        <div class="col-md-4 d-flex justify-content-end">
             <div id="profile-avatar-card" class="card">
                 <img src="{{user.profile_picture}}" class="card-img-top" alt="User Avatar">
                 <div class="card-body">
@@ -11,73 +11,49 @@
                 </div>
             </div>
         </div>
-
         <!-- Bio Card -->
-        <div class="col-md-8">
+        <div class="col-md-8 d-flex justify-content-start">
             <div id="profile-bio-card" class="card">
                 <div class="card-body">
                     <h5 class="card-title">About Me</h5>
-                    {{!-- <p class="card-text">This is a brief bio about the user. This should have a CHAR cap.</p> --}}
                     <div id="nested-card-container" class="mt-4">
                         <div class="card w-75 mb-3">
                             <div class="card-body">
-                                {{!-- <h5 class="card-title">Card Title</h5> --}}
                                 <p class="card-text">{{user.bio}}</p>
                             </div>
                         </div>
                     </div>
-                    <!-- End of Nested Card -->
                     <button class="btn btn-primary" id="edit-bio-btn">Edit</button>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-</div>
-</div>
-<!-- End of Nested Card -->
-
-<!-- Social Feed Card -->
-<div id="profile-social-card" class="card text-center mt-4">
-    <div class="card-header" id="feed-tab">
-        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#friend-posts" role="tab"
-                    aria-controls="friend-posts" aria-selected="true">Create Post</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab"
-                    aria-controls="your-posts" aria-selected="false">Your Posts</a>
-            </li>
-        </ul>
-    </div>
-    <div class="card-body tab-content" id="myTabContent">
-        <!-- Friend Posts Content -->
-        <div class="tab-pane fade show active" id="create-post" role="tabpanel" aria-labelledby="friend-posts-tab">
-            {{!-- <h5 class="card-title">Friend's Recent Posts</h5>
-            <p class="card-text">THIS IS WHERE FEED POSTS GO (RELATIVE TO THE USER'S FRIEND LIST)</p> --}}
-
-            <!-- Nested Card Inside Tab -->
-            <div class="card mb-3" style="max-width: 540px; margin: 20px auto;">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="path/to/image.jpg" class="img-fluid rounded-start" alt="Profile Picture">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">USERNAME</h5>
-                            <p class="card-text">THIS IS THE COMMENT</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <!-- Social Feed Card -->
+        <div class="col-md-12 mt-4 d-flex justify-content-center">
+            <div id="profile-social-card" class="card text-center">
+                <div class="card-header" id="feed-tab">
+                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#friend-posts"
+                                role="tab" aria-controls="friend-posts" aria-selected="true">Create Post</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab"
+                                aria-controls="your-posts" aria-selected="false">Your Posts</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="create-post" role="tabpanel" aria-labelledby="friend-posts-tab">
+                        <!-- Friend Posts Content -->
+                        <!-- Your Posts Content -->
+                        <div class="tab-pane fade" id="your-posts" role="tabpanel" aria-labelledby="your-posts-tab">
+                            {{#each posts}}
+                            {{>posts}}
+                            {{/each}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Your Posts Content -->
-        <div class="tab-pane fade" id="your-posts" role="tabpanel" aria-labelledby="your-posts-tab">
-            <!-- Nested Card Inside Your Posts Tab -->
-            {{#each posts}}
-            {{>posts}}
-            {{/each}}
-        </div>
+    </div>
+</div>

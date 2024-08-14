@@ -17,7 +17,7 @@ deleteBtn.addEventListener('click', async function() {
 
         if (response.ok) {
           alert('Profile deleted successfully.');
-          window.location.href = '/'; // Redirect to the home page or a goodbye page
+          window.location.href = '/'; // Redirect to the landing page or a goodbye page
         } else {
           alert('Failed to delete profile.');
         }
