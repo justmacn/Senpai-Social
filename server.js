@@ -46,33 +46,16 @@ app.use(session(sess));
 app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
+
+
 // Middleware for parsing application/json and urlencoded data
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Static middleware pointing to public folder to serve assets
 app.use(express.static(path.join(__dirname, "public")));
 
-// Multer setup for handling image uploads
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, 'uploads/'); // Folder where files will be stored
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname)); // File name with timestamp
-  }
-});
-
-// Initialize Multer middleware
-const upload = multer({ storage: storage });
-
-// Example route to handle file upload
-app.post('/upload', upload.single('image'), (req, res) => {
-  try {
-    res.send('File uploaded successfully!');
-  } catch (error) {
-    res.status(400).send('Error uploading file.');
-  }
-});
+// UPDLOADS MULTER (IMAGES)
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // sets up routes
 app.use(routes);
