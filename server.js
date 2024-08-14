@@ -5,6 +5,8 @@ const path = require("path");
 const express = require("express");
 const session = require("express-session");
 const exphbs = require("express-handlebars");
+// Handles UPLOADING Images
+const multer = require('multer');
 
 // Local Modules
 const routes = require("./controllers");
@@ -24,21 +26,14 @@ const hbs = exphbs.create();
 // Sets up session and connect to our Sequelize db
 const sess = {
   secret: "Pandas are awesome",
-  // Express session will use cookies by default, but you can specify options for those cookies by adding a 'cookies' property to your session options
   cookie: {
-    // Sets the maximum age for the cookie to be valid. Here, the cookie (and session) will expire after one day. The time should be given in milliseconds.
-    // 24 hours * 60 minutes * 60 seconds * 1000 milliseconds
     maxAge: 24 * 60 * 60 * 1000,
-    // Only store session cookies when the protocol being used to connect to the server is HTTP
     httpOnly: true,
-    // secure tells express-session to only initialize session cookies when the protocol being used is HTTPS. Having this set to true and running a server without encryption will result in the cookies not showing up in your developer console.
     secure: false,
-    // Only initialize session cookies when the referrer provided by the client matches the domain the server is hosted from
     sameSite: "strict",
   },
   resave: false,
   saveUninitialized: true,
-  // sets up session store
   store: new SequelizeStore({
     db: sequelize,
   }),
@@ -56,6 +51,28 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // Static middleware pointing to public folder to serve assets
 app.use(express.static(path.join(__dirname, "public")));
+
+// Multer setup for handling image uploads
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Folder where files will be stored
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname)); // File name with timestamp
+  }
+});
+
+// Initialize Multer middleware
+const upload = multer({ storage: storage });
+
+// Example route to handle file upload
+app.post('/upload', upload.single('image'), (req, res) => {
+  try {
+    res.send('File uploaded successfully!');
+  } catch (error) {
+    res.status(400).send('Error uploading file.');
+  }
+});
 
 // sets up routes
 app.use(routes);
