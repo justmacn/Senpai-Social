@@ -7,7 +7,8 @@ html, body {
   
   /* Body background styling */
   body {
-    background-image: url('/images/anime_collage.jpg') !important; /* Path to your background image */
+    /* background-color: rgb(52, 52, 52); */
+    background-image: url('/images/anime_collage_overlay-2-2.png') !important; /* Path to your background image */
     background-size: cover !important; /* Ensures the image covers the entire background */
     background-position: center !important; /* Centers the image */
     background-repeat: no-repeat !important; /* Prevents the image from repeating */
@@ -15,9 +16,9 @@ html, body {
   }
   
   /* Center the card and style it */
-  #profile-social-card {
+  #hm-social-card {
     margin: 50px auto; /* Centers the card horizontally */
-    max-width: 840px; /* Limits the width */
+    max-width: 1000px; /* Limits the width */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
     border-radius: 12px; /* Rounds the corners slightly */
     transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
@@ -25,14 +26,14 @@ html, body {
   }
   
   /* Style for the image inside the card */
-  #profile-social-card img {
+  #hm-social-card img {
     width: 100%; /* Ensures the image fits the card width */
     height: auto; /* Maintains the image aspect ratio */
     border-radius: 12px; /* Matches the card’s corner radius */
   }
   
   /* Hover effect for the card */
-  #profile-social-card:hover {
+  #hm-social-card:hover {
     box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
   }
   

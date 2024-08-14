@@ -10,7 +10,7 @@ const { withGuard } = require("../utils/authGuard");
 router.get("/", withGuard, async (req, res) => {
   try {
     const postData = await Post.findAll({
-      limit: 3,
+      limit: 5,
       order: [['createdAt', 'DESC'], ['updatedAt', 'DESC']], 
       include: [
         {

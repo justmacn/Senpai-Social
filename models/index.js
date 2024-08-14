@@ -16,7 +16,7 @@ const Post = require("./post");
 
 // Reminder- create any additional associations here
 //User Associations
-// User.hasMany(Post, { foreignKey: 'user_id' });
+User.hasMany(Post, { foreignKey: 'author_id' });
 // User.hasMany(Friends, { foreignKey: 'user_id1' });
 // User.hasMany(Friends, { foreignKey: 'user_id2' });
 // User.hasOne(Clan, { foreignKey: 'clan_id'})

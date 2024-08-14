@@ -17,6 +17,10 @@ body {
   /* min-height: 100vh; Ensure body takes up full viewport height */
 }
 
+header img {
+  scale: 100%;
+}
+
 #header {
   background-color: var(--mainblue);
 }
@@ -40,7 +44,8 @@ body {
 #logout-btn {
   color:  white;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 501;
+  font-size: 14px;
+  /* font-weight: 501; */
 }
 
 main {
@@ -70,10 +75,10 @@ footer i {
 }
 
 footer a {
-  color: #3c97bf;
+  color: white;
   text-decoration: none;
 }
 
-header img {
-  scale: 125%;
+footer a:hover {
+  color: #f77140; /* Red-orange color on hover */
 }

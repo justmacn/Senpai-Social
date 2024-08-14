@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body {
+    /* background-color: rgb(52, 52, 52); */
+    background-image: url('/images/anime_collage_overlay-2-2.png') !important; /* Path to your background image */
+    background-size: cover !important; /* Ensures the image covers the entire background */
+    background-position: center !important; /* Centers the image */
+    background-repeat: no-repeat !important; /* Prevents the image from repeating */
+    background-attachment: fixed !important; /* Fixes the image in place when scrolling */
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #four-card {
+    background-color: rgb(49, 49, 49);
+  }
+
+  #card-margin {
+    margin-top: 7rem;
+  }

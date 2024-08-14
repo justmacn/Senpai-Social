@@ -6,6 +6,7 @@ const { User, Post } = require("../models");
 // protects routes from unauthorized access
 const { withGuard } = require("../utils/authGuard");
 
+// route to send user their profile page
 router.get("/", withGuard, async (req, res) => {
   try {
     const userData = await User.findByPk(
@@ -14,6 +15,14 @@ router.get("/", withGuard, async (req, res) => {
       
     );
     const postData = await Post.findAll({
+      limit: 3,
+      order: [['createdAt', 'DESC'], ['updatedAt', 'DESC']],
+      include: [
+        {
+          model: User,
+          attributes: ['username', 'profile_picture'],
+        }
+      ],
       where: {
         author_id: req.session.user_id,
       },
@@ -21,15 +30,13 @@ router.get("/", withGuard, async (req, res) => {
 
     const posts = postData.map((post) => post.get({ plain: true }));
     
-    
     const user = userData.get({ plain: true })
-    console.log(posts)
-    console.log(user)
-    // Reminder- We're passing the userExamples data to the page-one handlebars template here!
-    // Reminder- We're also passing the loggedIn status to the page-one handlebars template here so that we can conditionally render items if the user is logged in or not.
-    res.render("profile", {
+
+   res.render("profile", {
       user,
       posts,
+      loggedIn: req.session.logged_in,
+      username: req.session.username,
     });
   } catch (err) {
     res.status(500).json(err);
