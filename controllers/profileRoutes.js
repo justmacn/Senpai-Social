@@ -55,6 +55,50 @@ router.put("/edit", withGuard, async (req, res) => {
 
   }
 });
+//delete profile route
+router.delete("/delete", withGuard, async (req, res) => {
+  try {
+    // Delete associated posts first if needed
+    await Post.destroy({
+      where: { author_id: req.session.user_id },
+    });
 
+    // Delete user profile
+    const deleted = await User.destroy({
+      where: { id: req.session.user_id },
+    });
+
+    if (deleted) {
+      req.session.destroy(() => {
+        res.status(200).json({ message: "User deleted successfully" });
+      });
+    } else {
+      res.status(404).json({ message: "User not found" });
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+//delete individual posts 
+router.delete("/post/:id", withGuard, async (req, res) => {
+  try {
+    const postId = req.params.id;
+    const deleted = await Post.destroy({
+      where: {
+        id: postId,
+        author_id: req.session.user_id, // Ensure the post belongs to the logged-in user
+      },
+    });
+
+    if (deleted) {
+      res.status(200).json({ message: "Post deleted successfully" });
+    } else {
+      res.status(404).json({ message: "Post not found or you do not have permission to delete it" });
+    }
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
