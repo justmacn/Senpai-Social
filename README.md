@@ -1,44 +1,36 @@
-<!-- For assistance using this README for your project, reach out to your instructinoal staff. -->
-
-<!-- TODO: Highlight "404pandas" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github Username and type your Username in its place -->
-<!-- TODO: Highlight "project-2-setup-guide" and shift+command+L (for mac) or cntrl+shift+L (for windows) to select all instances of the example Github Repository name and type your repostitory name in its place -->
-
 <div align="center">
 
-  <!-- Add additional badges using the following format: -->
-  <!-- ![Name](urlToShieldHere)(urlToGithubHere) -->
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Contributors](https://img.shields.io/github/contributors/404pandas/project-2-setup-guide.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/project-2-setup-guide/graphs/contributors)
-[![Forks](https://img.shields.io/github/forks/404pandas/project-2-setup-guide.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/project-2-setup-guide/network/members)
-[![Stargazers](https://img.shields.io/github/stars/404pandas/project-2-setup-guide.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/project-2-setup-guide/stargazers)
-[![Issues](https://img.shields.io/github/issues/404pandas/project-2-setup-guide.svg?style=plastic&logo=appveyor)](https://github.com/404pandas/project-2-setup-guide/issues)
+[![Contributors](https://img.shields.io/github/contributors/justmacn/Senpai-Social.svg?style=plastic&logo=appveyor)](https://github.com/justmacn/Senpai-Social/graphs/contributors)
+[![Forks](https://img.shields.io/github/forks/justmacn/Senpai-Social.svg?style=plastic&logo=appveyor)](https://github.com/justmacn/Senpai-Social/network/members)
+[![Stargazers](https://img.shields.io/github/stars/justmacn/Senpai-Social.svg?style=plastic&logo=appveyor)](https://github.com/justmacn/Senpai-Social/stargazers)
+[![Issues](https://img.shields.io/github/issues/justmacn/Senpai-Social.svg?style=plastic&logo=appveyor)](https://github.com/justmacn/Senpai-Social/issues)
 
 </div>
 
-<!-- PROJECT LOGO -->
+<!--  -->
 
 <div align="center">
-  <a href="https://github.com/404pandas/project-2-setup-guide">
-  <!-- TODO: Correct this file path to a logo if you would like one; otherwise, delete this a href -->
-    <img src="./public/images/" alt="Logo" width="80" height="80">
+  <a href="https://github.com/justmacn/Senpai-Social">
+  <!-- -->
+    <img src="./public/images/ss-logo-placeholder-7.png" alt="Logo" width="300" height="80">
   </a>
 
-<!-- TODO: Edit App name -->
+<!-- -->
   <h3 align="center">Project 2 App Name</h3>
 
   <p align="center">
-  <!-- TODO: Edit App description -->
-    Project 2 Description will go here    <br />
-    <a href="https://github.com/404pandas/project-2-setup-guide"><strong>Explore the docs »</strong></a>
+  <!-- -->
+    Social Network for Anime enthusiasists <br />
+    <a href="https://github.com/justmacn/Senpai-Social"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!-- TODO: Edit deployment link -->
     <a href="https://github.com/404pandas/project-2-setup-guide">View Demo(Coming Soon)</a>
     ·
-    <a href="https://github.com/404pandas/project-2-setup-guide/issues">Report Bug</a>
+    <a href="https://github.com/justmacn/Senpai-Social/issues">Report Bug</a>
     ·
-    <a href="https://github.com/404pandas/project-2-setup-guide/issues">Request Feature</a>
+    <a href="https://github.com/justmacn/Senpai-Social/issues">Request Feature</a>
 
   </p>
 </div>
@@ -94,9 +86,9 @@ This project was built using Node, Express, Handlebars, PostgreSQL, and Sequeliz
     "sequelize": "^6.3.5"
   },
   "devDependencies": {
-    "nodemon": "^3.0.3"-->
+    "nodemon": "^3.0.3" -->
 
-<!-- TODO: Add any additional badges as needed. For more info, visit: https://github.com/404pandas/empty-resources/blob/main/assets/images/shields.md -->
+<!-- -->
 
 [![Javascript](https://img.shields.io/badge/Language-JavaScript-ff0000?style=plastic&logo=JavaScript&logoWidth=10)](https://javascript.info/)
 [![CSS](https://img.shields.io/badge/Language-CSS-ff8000?style=plastic&logo=CSS3&logoWidth=10)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -122,7 +114,7 @@ Once completely built, this application will function as a deployed app on Rende
 1. Clone the rep
 
 ```
-git clone https://github.com/404pandas/project-2-setup-guide.git
+git clone https://github.com/justmacn/Senpai-Social.git
 ```
 
 2. Install dependencies
@@ -175,11 +167,11 @@ npm run start
 
 #### Future Development
 
-- [ ] Add Lines of future development ideas here
-- [ ] Add Lines of future development ideas here
-- [ ] Add Lines of future development ideas here
+- [ ] Marketplace where users can buy & sell Anime goods.
+- [ ] More functionality to Social side of the website.
+- [ ] Improve overall styling, and layouts.
 
-See the [open issues](https://github.com/404pandas/project-2-setup-guide/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/justmacn/Senpai-Social/issues) for a full list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -206,19 +198,19 @@ This project is licensed under the MIT license.
 
 ## Contact
 
-<!-- TODO: Add your name, portfolio link, and email if you would like here -->
+<!-- -->
 
-[Mary Elenius](https://maryelenius.com/) - mary.panda.jackson@gmail.com
+[JustMac'n](https://github.com/justmacn)
 
-[Contributor One](https://maryelenius.com/) - contributor.one@email.com
+[Setridge Crawford](https://github.com/SetCra21) - setcrawfordjr_21@yahoo.com
 
-[Contributor One](https://maryelenius.com/) - contributor.one@email.com
+[James Parker](https://github.com/JamesWilliamParker) - jamesparker.us@gmail.com
 
-[Contributor One](https://maryelenius.com/) - contributor.one@email.com
+[Alex Silien](https://github.com/AlexSilien1) - alexsilien64@gmail.com
 
 Project Links:
 
-[Github Repository](https://github.com/404pandas/project-2-setup-guide)
+[Github Repository](https://github.com/justmacn/Senpai-Social)
 
 <!-- TODO: add your deployment link here -->
 
