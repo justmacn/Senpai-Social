@@ -58,8 +58,6 @@ router.put("/edit", withGuard, async (req, res) => {
     }
    } catch (err) {
      res.status(500).json(err);
-   
-
   }
 });
 //delete profile route
