@@ -69,7 +69,7 @@
 ![Landing page where user logs in/signs up](./public/images/Screen%20Shot%202024-08-14%20at%2012.40.01%20PM.png)
 ![Social feed page where user can see most recent posts](./public/images/Screen%20Shot%202024-08-14%20at%2012.50.21%20PM.png)
 ![Social feed 2](./public/images/Screen%20Shot%202024-08-14%20at%2012.53.19%20PM.png)
-![User-profile page]()
+![User-profile page](./public/images/image.png)
 ![User-edit page]()
 <!-- ![Screenshot alt description](directPathOfScreenshots) -->
 <!-- Add video demos using the following format: -->
