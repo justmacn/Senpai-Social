@@ -7,7 +7,7 @@ html, body {
 
 /* Body background styling */
 body {
-    background-image: url('/images/anime_collage.jpg') !important; /* Path to your background image */
+    background-image: url('/images/anime_collage_overlay-2-2.png') !important; /* Path to your background image */
     background-size: cover !important; /* Ensures the image covers the entire background */
     background-position: center !important; /* Centers the image */
     background-repeat: no-repeat !important; /* Prevents the image from repeating */

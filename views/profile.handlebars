@@ -1,136 +1,75 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/profile-page.css">
-</head>
-<body>
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Profile Avatar Card -->
-            <div class="col-md-4">
-                <div id="profile-avatar-card" class="card">
-                    <img src="path/to/avatar.jpg" class="card-img-top" alt="User Avatar">
-                    <div class="card-body">
-                        <button class="btn btn-primary" id="edit-avatar-btn">Edit</button>
-                    </div>
+<link rel="stylesheet" href="/css/profile-page.css">
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Profile Avatar Card -->
+        <div class="col-md-4">
+            <div id="profile-avatar-card" class="card">
+                <img src="{{user.profile_picture}}" class="card-img-top" alt="User Avatar">
+                <div class="card-body">
+                    <button class="btn btn-primary" id="edit-avatar-btn">Edit</button>
                 </div>
             </div>
+        </div>
 
-            <!-- Bio Card -->
-            <div class="col-md-8">
-                <div id="profile-bio-card" class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">About Me</h5>
-                        {{!-- <p class="card-text">This is a brief bio about the user. This should have a CHAR cap.</p> --}}
-                        
-                        
-                        <div id="nested-card-container" class="mt-4">
-                            <div class="card w-75 mb-3">
-                                <div class="card-body">
-                                    {{!-- <h5 class="card-title">Card Title</h5> --}}
-                                    <p class="card-text">BIO CONTENT GOES HERE</p>
-                                </div>
+        <!-- Bio Card -->
+        <div class="col-md-8">
+            <div id="profile-bio-card" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">About Me</h5>
+                    {{!-- <p class="card-text">This is a brief bio about the user. This should have a CHAR cap.</p> --}}
+                    <div id="nested-card-container" class="mt-4">
+                        <div class="card w-75 mb-3">
+                            <div class="card-body">
+                                {{!-- <h5 class="card-title">Card Title</h5> --}}
+                                <p class="card-text">{{user.bio}}</p>
                             </div>
                         </div>
-                        <!-- End of Nested Card -->
-                        <button class="btn btn-primary" id="edit-bio-btn">Edit</button>
+                    </div>
+                    <!-- End of Nested Card -->
+                    <button class="btn btn-primary" id="edit-bio-btn">Edit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- End of Nested Card -->
+
+<!-- Social Feed Card -->
+<div id="profile-social-card" class="card text-center mt-4">
+    <div class="card-header" id="feed-tab">
+        <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#friend-posts" role="tab"
+                    aria-controls="friend-posts" aria-selected="true">Create Post</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab"
+                    aria-controls="your-posts" aria-selected="false">Your Posts</a>
+            </li>
+        </ul>
+    </div>
+    <div class="card-body tab-content" id="myTabContent">
+        <!-- Friend Posts Content -->
+        <div class="tab-pane fade show active" id="friend-posts" role="tabpanel" aria-labelledby="friend-posts-tab">
+            {{!-- <h5 class="card-title">Friend's Recent Posts</h5>
+            <p class="card-text">THIS IS WHERE FEED POSTS GO (RELATIVE TO THE USER'S FRIEND LIST)</p> --}}
+
+            <!-- Nested Card Inside Tab -->
+            <div class="card mb-3" style="max-width: 540px; margin: 20px auto;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="path/to/image.jpg" class="img-fluid rounded-start" alt="Profile Picture">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">USERNAME</h5>
+                            <p class="card-text">THIS IS THE COMMENT</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-                        </div>
-                        </div>
-                        </div>
-                        <!-- End of Nested Card -->
-
-        <!-- Social Feed Card -->
-        <div id="profile-social-card" class="card text-center mt-4">
-            <div class="card-header" id="feed-tab">
-                <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#friend-posts" role="tab" aria-controls="friend-posts" aria-selected="true">Friend Posts</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab" aria-controls="your-posts" aria-selected="false">Your Posts</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="card-body tab-content" id="myTabContent">
-                <!-- Friend Posts Content -->
-                <div class="tab-pane fade show active" id="friend-posts" role="tabpanel" aria-labelledby="friend-posts-tab">
-                    {{!-- <h5 class="card-title">Friend's Recent Posts</h5>
-                    <p class="card-text">THIS IS WHERE FEED POSTS GO (RELATIVE TO THE USER'S FRIEND LIST)</p> --}}
-                    
-                    <!-- Nested Card Inside Tab -->
-                    <div class="card mb-3" style="max-width: 540px; margin: 20px auto;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="path/to/image.jpg" class="img-fluid rounded-start" alt="Profile Picture">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">USERNAME</h5>
-                                    <p class="card-text">THIS IS THE COMMENT</p>
-                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 <!-- Your Posts Content -->
-                <div class="tab-pane fade" id="your-posts" role="tabpanel" aria-labelledby="your-posts-tab">
-                    {{!-- <h5 class="card-title">Your Recent Posts</h5>
-                    <p class="card-text">THIS IS WHERE YOUR POSTS GO</p> --}}
-                    
-                    <!-- Nested Card Inside Your Posts Tab -->
-                    <div class="card mb-3" style="max-width: 540px; margin: 20px auto;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="path/to/your-image.jpg" class="img-fluid rounded-start" alt="Profile Picture">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">USERNAME</h5>
-                                    <p class="card-text">THIS IS THE COMMENT</p>
-                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-
-
-  <div>Welcome to the profile page!</div>
-  <div class="flexbox-turnon">
-    {{!-- profile image --}}
-    <img src={{user.profile_picture}} class="rounded float-left img-fluid" alt="...">
-    <ul class="list-group">
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-         {{user.username}}
-        <span class="badge badge-primary badge-pill">14</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-{{user.bio}}        <span class="badge badge-primary badge-pill">2</span>
-      </li>
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        {{favorite_anime}}
-        <span class="badge badge-primary badge-pill">1</span>
-      </li>
-    </ul>
-  </div>
-  {{!-- posts? --}}
-  {{#each posts}}
-  {{!-- partial for posts --}}
-  {{> posts}}
-  {{/each}}
-</div>
-<script src="/js/page-one.js"></script>
-<script src="/js/delete.js"></script> --!
