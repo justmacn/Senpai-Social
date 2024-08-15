@@ -1,100 +1,59 @@
-    <link rel="stylesheet" href="/css/profile-page.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/profile-page.css">
 
-<body>
-    <div class="container mt-5">
-        <div class="row">
-            <!-- Profile Avatar Card -->
-            <div class="col-md-4">
-                <div id="profile-avatar-card" class="card">
-                    <img src="{{user.profile_picture}}" class="card-img-top" alt="User Avatar">
-                    <div class="card-body">
-                        <button class="btn btn-primary" id="edit-avatar-btn">Edit</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Bio Card -->
-            <div class="col-md-8">
-                <div id="profile-bio-card" class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">About Me</h5>
-                        <!-- <p class="card-text">This is a brief bio about the user. This should have a CHAR cap.</p> -->
-                        <div id="nested-card-container" class="mt-4">
-                            <div class="card w-75 mb-3">
-                                <div class="card-body">
-                                    <!-- <h5 class="card-title">Card Title</h5> -->
-                                    <p class="card-text">{{user.bio}}</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End of Nested Card -->
-                        <button class="btn btn-primary" id="edit-bio-btn">Edit</button>
-                    </div>
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="row justify-content-center">
+        <!-- Profile Avatar Card -->
+        <div class="col-md-4 d-flex justify-content-end">
+            <div id="profile-avatar-card" class="card">
+                <img src="{{user.profile_picture}}" class="card-img-top" alt="User Avatar">
+                <div class="card-body">
+                    <button class="btn btn-primary" id="edit-avatar-btn">Edit</button>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Social Feed Card -->
-    <div id="profile-social-card" class="card text-center mt-4">
-        <div class="card-header" id="feed-tab">
-            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#create-post" role="tab"
-                        aria-controls="create-post" aria-selected="true">Create Post</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab"
-                        aria-controls="your-posts" aria-selected="false">Your Posts</a>
-                </li>
-            </ul>
-        </div>
-        <div class="card-body tab-content" id="myTabContent">
-            <!-- Create Post Content -->
-            <div class="tab-pane fade show active" id="create-post" role="tabpanel" aria-labelledby="friend-posts-tab">
-                <div class="card mb-3" style="max-width: 540px; margin: 20px auto;">
-                    <div class="card-body">
-                        <h5 class="card-title">Create a New Post</h5>
-                        <form id="new-posts-form">
-                            <div class="mb-3">
-                                <label for="post-text" class="form-label">Post Content</label>
-                                <textarea class="form-control" id="post-text" name="post-text" rows="3" required></textarea>
-                            </div>
-                            <div class="mb-3">
-                                <label for="image-upload" class="form-label">Upload an Image</label>
-                                <input class="form-control" type="file" id="image-upload" name="image" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Your Posts Content -->
-            <div class="tab-pane fade" id="your-posts" role="tabpanel" aria-labelledby="your-posts-tab">
-                <!-- Your existing code for the "Your Posts" tab goes here -->
-                <div class="card mb-3" style="max-width: 540px; margin: 20px auto;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="path/to/image.jpg" class="img-fluid rounded-start" alt="Profile Picture">
-                        </div>
-                        <div class="col-md-8">
+        <!-- Bio Card -->
+        <div class="col-md-8 d-flex justify-content-start">
+            <div id="profile-bio-card" class="card">
+                <div class="card-body">
+                    <h5 class="card-title">About Me</h5>
+                    <div id="nested-card-container" class="mt-4">
+                        <div class="card w-75 mb-3">
                             <div class="card-body">
-                                <h5 class="card-title">USERNAME</h5>
-                                <p class="card-text">THIS IS THE COMMENT</p>
-                                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                                <p class="card-text">{{user.bio}}</p>
                             </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="edit-bio-btn">Edit</button>
+                </div>
+            </div>
+        </div>
+        <!-- Social Feed Card -->
+        <div class="col-md-12 mt-4 d-flex justify-content-center">
+            <div id="profile-social-card" class="card text-center">
+                <div class="card-header" id="feed-tab">
+                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#friend-posts"
+                                role="tab" aria-controls="friend-posts" aria-selected="true">Create Post</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab"
+                                aria-controls="your-posts" aria-selected="false">Your Posts</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="create-post" role="tabpanel" aria-labelledby="friend-posts-tab">
+                        <!-- Friend Posts Content -->
+                        <!-- Your Posts Content -->
+                        <div class="tab-pane fade" id="your-posts" role="tabpanel" aria-labelledby="your-posts-tab">
+                            {{#each posts}}
+                            {{>posts}}
+                            {{/each}}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-</body>
-</html>
+</div>

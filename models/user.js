@@ -22,7 +22,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [10, Infinity],
+        len: [8, Infinity],
       },
     },
     bio: {

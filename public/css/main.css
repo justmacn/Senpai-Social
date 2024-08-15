@@ -95,3 +95,42 @@ footer a {
 footer a:hover {
   color: #f77140; /* Red-orange color on hover */
 }
+
+.edit-profile-card {
+  width: 33%; /* 1/3rd of the page width */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.edit-profile-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-profile-card label {
+  margin-bottom: 0.5rem;
+}
+
+.edit-profile-card input,
+.edit-profile-card textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-profile-card button {
+  padding: 0.75rem;
+  background-color: var(--mainblue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-profile-card button:hover {
+  background-color: #2579b5;
+}
