@@ -1,17 +1,15 @@
 const newFormHandler = async function (event) {
   event.preventDefault();
 
-  const title = document.querySelector('#post-title').value.trim();
-  const content = document.querySelector('#post-content').value.trim();
+  const anime_title = document.querySelector('#post-title').value.trim();
+  const text = document.querySelector('#post-content').value.trim();
 
   // Reminder- We were able to look at out project-2-setup-guide/controllers/api/exampleDataRoutes.js file to determine what our route is for this request
   try {
-    const response = await fetch(`/api/users/post`, {
+    const response = await fetch('/api/post', {
       method: "POST",
       body: JSON.stringify({
-        author_id: req.session.users_id,
-        text: content,
-        anime_title: title
+        anime_title, text
       }),
       headers: { "Content-Type": "application/json" },
     });

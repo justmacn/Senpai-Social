@@ -17,7 +17,7 @@ body {
     background-attachment: fixed !important; /* Fixes the image in place when scrolling */
 }
 
-h5 {
+#title-h5 {
     font-weight: 505;
     font-style: italic
 }

@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 /* Center the recent posts card on the page */
+html,
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 #recent-posts-card {
   margin: 50px auto;
   /* Adds padding from the header */
@@ -30,4 +37,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#h6 {
+  font-weight: 505;
+  font-size: 12px;
+  font-style: italic;
+}
+
+h5 {
+  font-weight: 505;
+  font-size: 18px;
 }

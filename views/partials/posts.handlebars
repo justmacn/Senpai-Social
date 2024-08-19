@@ -6,17 +6,19 @@
 {{!-- The Code Below is the Card that Handles the Recent Posts for Homepage --}}
 <div class="card mb-3" id="recent-posts-card">
   <div class="row g-0 align-items-center">
-    <div class="col-md-4 d-flex align-items-center justify-content-center">
+    <div class="col-md-4 d-flex flex-column align-items-center justify-content-center">
       <img src="{{user.profile_picture}}" class="img-thumbnail img-fluid border border-dark-subtle border-2 rounded-circle" id="pfp" alt="Profile Picture">
+      <p class="card-text pt-1" id="h6">{{user.username}}</p>
     </div>
     <div class="col-md-8 d-flex align-items-center">
       <div class="card-body">
-        <h5 class="card-title">{{user.username}}</h5>
+        <h5 class="card-title">{{anime_title}}</h5>
         <p class="card-text">{{text}}</p>
         <p class="card-text"><small class="text-body-secondary">Last updated {{createdAt}}</small></p>
       </div>
     </div>
   </div>
 </div>
+
 
 
