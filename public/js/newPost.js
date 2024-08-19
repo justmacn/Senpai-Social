@@ -1,20 +1,33 @@
 const newFormHandler = async function (event) {
   event.preventDefault();
 
+  const title = document.querySelector('#post-title').value.trim();
+  const content = document.querySelector('#post-content').value.trim();
 
   // Reminder- We were able to look at out project-2-setup-guide/controllers/api/exampleDataRoutes.js file to determine what our route is for this request
-  await fetch(`/api/uploads`, {
-    // Reminder- Method will change depending on what we are doing to our API
-    method: "POST",
-    // Reminder- We need to make sure we are sending the correct data to our API by stringifying the data we captured from the form on line 4
-    body: JSON.stringify({
-      ...req.body,
-      user_id:req.session.users_id
-    }),
-    headers: { "Content-Type": "application/json" },
-  });
-  // Reminder- This might change depending on your app. Where do you want your user to go after they submit the form?
-  // document.location.replace("/");
+  try {
+    const response = await fetch(`/api/users/post`, {
+      method: "POST",
+      body: JSON.stringify({
+        author_id: req.session.users_id,
+        text: content,
+        anime_title: title
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+  if (response.ok) {
+    alert('Post created successfully!');
+    document.location.replace('/profile');
+} else {
+    const errorText = await response.text(); // Read response text for more info
+    console.error('Failed to create post:', errorText);
+    alert('Failed to create post.');
+}
+} catch (error) {
+console.error('Error:', error);
+alert('An error occurred while creating the post.');
+}
 };
 
 document

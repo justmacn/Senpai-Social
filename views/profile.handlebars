@@ -1,59 +1,91 @@
 <link rel="stylesheet" href="/css/profile-page.css">
 
-<div class="container mt-5 d-flex justify-content-center">
-    <div class="row justify-content-center">
-        <!-- Profile Avatar Card -->
-        <div class="col-md-4 d-flex justify-content-end">
-            <div id="profile-avatar-card" class="card">
-                <img src="{{user.profile_picture}}" class="card-img-top" alt="User Avatar">
-                <div class="card-body">
-                    <button class="btn btn-primary" id="edit-avatar-btn">Edit</button>
+<div class="d-flex flex-row justify-content-center mt-5">
+    <!-- Profile Avatar Card -->
+    <div class="ms-10 pe-5 align-self-start">
+        {{!-- <div class="col-md-4 pe-3 d-flex justify-content-center"> --}}
+            <div id="profile-avatar-card" class="card" style="width: 250px; height: 200px;">
+                {{#if user.profile_picture}}
+                <img src="{{user.profile_picture}}" class="card-img-top" alt="Profile Picture"
+                    style="width: 100%; height: auto; max-height: 150px; object-fit: cover;">
+                {{else}}
+                <div class="card-body d-flex flex-column justify-content-center align-items-center pt-3">
+                    <p class="card-text">Add a profile picture.</p>
+                </div>
+                {{/if}}
+                <div class="card-body d-flex flex-row justify-content-center align-items-center " style="border-top: 2px solid #c5c5c5; max-height: 65px;">
+                    <h5 class="card-title pe-3">{{user.username}}</h5>
+                    <a href="/profile/edit-user"><img class="mb-1" id="edit-icon" src="/images/edit-icon.png"
+                            alt="icon for an edit button"></a>
                 </div>
             </div>
         </div>
         <!-- Bio Card -->
-        <div class="col-md-8 d-flex justify-content-start">
-            <div id="profile-bio-card" class="card">
-                <div class="card-body">
-                    <h5 class="card-title">About Me</h5>
-                    <div id="nested-card-container" class="mt-4">
-                        <div class="card w-75 mb-3">
-                            <div class="card-body">
-                                <p class="card-text">{{user.bio}}</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="btn btn-primary" id="edit-bio-btn">Edit</button>
+        <div class="flex-start ps-5">
+            <div id="profile-bio-card" class="card" style="min-width: 500px; max-width: 500px; min-height: 200px;">
+                <div class="card-body d-flex flex-row justify-content-start pt-4 pb-0 ps-4"
+                    style="max-height: 55px;">
+                    <h5 class="card-title pe-3">About Me</h5>
+                    <a href="/profile/edit-user"><img class="mt-1" id="edit-icon" src="/images/edit-icon.png"
+                            alt="icon for an edit button"></a>
                 </div>
+                <div class="card-body d-flex flex-column justify-content-start align-items-start pt-3 ps-4"
+                    id="nested-card-container">
+                    {{#if user.bio}}
+                    <p class="card-text">{{user.bio}}</p>
+                </div>
+                {{else}}
+                <p class="card-text">Add a profile bio.</p>
             </div>
+            {{/if}}
         </div>
-        <!-- Social Feed Card -->
-        <div class="col-md-12 mt-4 d-flex justify-content-center">
-            <div id="profile-social-card" class="card text-center">
-                <div class="card-header" id="feed-tab">
-                    <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#friend-posts"
-                                role="tab" aria-controls="friend-posts" aria-selected="true">Create Post</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab"
-                                aria-controls="your-posts" aria-selected="false">Your Posts</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-body tab-content" id="myTabContent">
-                    <div class="tab-pane fade show active" id="create-post" role="tabpanel" aria-labelledby="friend-posts-tab">
-                        <!-- Friend Posts Content -->
-                        <!-- Your Posts Content -->
-                        <div class="tab-pane fade" id="your-posts" role="tabpanel" aria-labelledby="your-posts-tab">
-                            {{#each posts}}
-                            {{>posts}}
-                            {{/each}}
-                        </div>
+    </div>
+</div>
+</div>
+<!-- Social Feed Card -->
+<div class="ms-auto p-2">
+    <div id="profile-social-card" class="card text-center">
+        <div class="card-header" id="feed-tab">
+            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="friend-posts-tab" data-bs-toggle="tab" href="#friend-posts"
+                        role="tab" aria-controls="friend-posts" aria-selected="true">Create Post</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="your-posts-tab" data-bs-toggle="tab" href="#your-posts" role="tab"
+                        aria-controls="your-posts" aria-selected="false">Your Posts</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card-body tab-content" id="myTabContent">
+            <!-- Create Post Tab Pane -->
+            <div class="tab-pane fade show active" id="friend-posts" role="tabpanel" aria-labelledby="friend-posts-tab">
+                <form id="new-posts-form">
+                    <div class="ms-2 my-3 text-start" id="h5">
+                        <label for="postTitle" class="form-label ps-2">Anime Title</label>
+                        <input type="text" class="form-control border-2 border-grey" style="width: 50%;" id="post-title">
                     </div>
-                </div>
+                    <div class="ms-2 my-3 text-start" id="h5">
+                        <label for="postContent" class="form-label ps-2">Content</label>
+                        <textarea class="form-control border-2 border-grey" style="width: 85%;" id="post-content"
+                            rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Post</button>
+                </form>
+            </div>
+            <!-- Your Posts Tab Pane -->
+            <div class="tab-pane fade" id="your-posts" role="tabpanel" aria-labelledby="your-posts-tab">
+                {{#if posts}}
+                {{#each posts}}
+                {{>posts}}
+                {{/each}}
+                {{else}}
+                <p class="card-text text-center my-4">You haven't made any posts. Share your thoughts <a
+                        href="/profile#friend-posts">here</a>.</p>
+                {{/if}}
             </div>
         </div>
     </div>
+</div>
+
 </div>

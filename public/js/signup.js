@@ -15,6 +15,7 @@ const signupFormHandler = async function (event) {
       body: JSON.stringify({
         username: usernameEl,
         password: passwordEl,
+        profile_picture: "https://filestore.community.support.microsoft.com/api/images/8a86b79d-4e94-4c61-ace1-837ffd763978?upload=true",
       }),
       headers: { "Content-Type": "application/json" },
     });
