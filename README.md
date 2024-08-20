@@ -13,20 +13,20 @@
 <div align="center">
   <a href="https://github.com/justmacn/Senpai-Social">
   <!-- -->
-    <img src="./public/images/ss-logo-placeholder-7.png" alt="Logo" width="300" height="80">
+    <img src="./public/images/ss-logo-placeholder-8.png" alt="Logo" width="auto" height="auto">
   </a>
 
 <!-- -->
-  <h3 align="center">Project 2 App Name</h3>
+  <h3 align="center">Senapi Social</h3>
 
   <p align="center">
   <!-- -->
-    Social Network for Anime enthusiasists <br />
+    Social Network for Anime otaku <br />
     <a href="https://github.com/justmacn/Senpai-Social"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <!-- TODO: Edit deployment link -->
-    <a href="https://github.com/404pandas/project-2-setup-guide">View Demo(Coming Soon)</a>
+    <a href="https://senapisocial.onrender.com">Deployed App</a>
     ·
     <a href="https://github.com/justmacn/Senpai-Social/issues">Report Bug</a>
     ·
@@ -44,18 +44,15 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
+    </li>  
+    <li><a href="#getting-started">Installation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#mvp">Minimum Viable Product</a></li>
+    <li><a href="#future-development">Future Development</a></li>
+    <li><a href="#contributing">Contributions</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#project-links">Links</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
@@ -114,7 +111,7 @@ This project was built using Node, Express, Handlebars, PostgreSQL, and Sequeliz
 
 Once completely built, this application will function as a deployed app on Render.
 
-### Local Installation / Testing
+### Local Installation/Testing
 
 1. Clone the rep
 
@@ -222,13 +219,14 @@ This project is licensed under the MIT license.
 
 [Alex Silien](https://github.com/AlexSilien1) - alexsilien64@gmail.com
 
-Project Links:
+
+## Project Links
 
 [Github Repository](https://github.com/justmacn/Senpai-Social)
 
-<!-- TODO: add your deployment link here -->
 
-[Deployment- coming soon](https://google.com)
+[Deployed Website](https://senapisocial.onrender.com)
+
 
 <!-- ACKNOWLEDGMENTS -->
 
