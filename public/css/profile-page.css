@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
 /* Ensures that the html and body (background image) cover the full viewport height */
 html, body {
     height: 100% !important; /* Full height of the viewport */
     margin: 0 !important; /* Remove default margins */
     padding: 0 !important; /* Remove default padding */
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* Body background styling */
@@ -14,37 +17,20 @@ body {
     background-attachment: fixed !important; /* Fixes the image in place when scrolling */
 }
 
-/* Profile Avatar Card */
-#profile-avatar-card {
-    margin: 50px 0; /* Top and bottom margin for spacing */
-    max-width: 300px; /* Set a maximum width for the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
-    border-radius: 12px; /* Rounds the corners slightly */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
-    position: relative; /* Required for positioning within the card */
+#title-h5 {
+    font-weight: 505;
+    font-style: italic
 }
 
-/* Align the Avatar card to the left */
-#profile-avatar-card {
-    margin-left: -200; /* Align to the left */
-    margin-right: auto; /* Pushes the card to the left while keeping the right margin auto */
+#h5 {
+    font-weight: 505;
+    font-size: 18px
 }
 
 #profile-avatar-card:hover {
     box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
 }
 
-/* Style for the profile bio card */
-#profile-bio-card {
-    margin: 50px 0; /* Top and bottom margin for spacing */
-    max-width: 800px; /* Set a maximum width for the card */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
-    border-radius: 12px; /* Rounds the corners slightly */
-    transition: box-shadow 0.3s ease; /* Smooth transition for the hover effect */
-    position: relative; /* Required for positioning within the card */
-    margin-left: -200; /* Align to the left */
-    margin-right: auto; /* Pushes the card to the left while keeping the right margin auto */
-}
 
 #profile-bio-card:hover {
     box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
@@ -64,11 +50,10 @@ body {
     box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
 }
 
-#nested-card-container {
+/* #nested-card-container {
     display: flex;
     justify-content: center; /* Horizontally centers the nested card */
-    margin-top: 20px; /* Adjust spacing as needed */
-}
+/* } */
 
 #edit-bio-btn, #edit-avatar-btn {
     background-color: #2c90e3;
@@ -81,6 +66,11 @@ body {
 }
 #edit-avatar-btn:hover {
     box-shadow: 0 8px 16px rgba(0, 255, 255, 0.6); /* Adds a glowing effect */
+}
+
+#edit-icon {
+    height: 16px;
+    width: 16px;
 }
 /* 
 #your-posts-tab{
