@@ -1,7 +1,7 @@
 {
   "name": "SenpaiSocial",
   "version": "1.0.0",
-  "description": "An anime-themed Social Networking App",
+  "description": "A Social Network for Anime otaku",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,7 @@
   },
   "keywords": [
     "Anime",
+    "Otaku",
     "Node",
     "Sequelize",
     "Javascript",
