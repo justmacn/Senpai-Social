@@ -211,9 +211,9 @@ This project is licensed under the MIT license.
 
 <!-- -->
 
-[JustMac'n](https://github.com/justmacn)
+[JustMac_n](https://github.com/justmacn)
 
-[Setridge Crawford](https://github.com/SetCra21) - setcrawfordjr_21@yahoo.com
+[Setrige Crawford](https://github.com/SetCra21) - setcrawfordjr_21@yahoo.com
 
 [James Parker](https://github.com/JamesWilliamParker) - jamesparker.us@gmail.com
 
