@@ -1,7 +1,7 @@
 {
-  "name": "example-project-two",
+  "name": "SenpaiSocial",
   "version": "1.0.0",
-  "description": "Write a description about your app here",
+  "description": "An anime-themed Social Networking App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,26 +9,28 @@
     "seed": "node seeds/seed.js"
   },
   "keywords": [
-    "Keyworkd1",
-    "Keyword2",
-    "Keyword3"
+    "Anime",
+    "Node",
+    "Sequelize",
+    "Javascript",
+    "Social Media"
   ],
-  "author": "Your Name",
+  "author": "JustMac_n",
   "contributors": [
     {
-      "name": "Contributor Name",
-      "email": "contributor.email@email.com",
-      "url": "https://github.com/contributorUsername"
+      "name": "Setrige Crawford",
+      "email": "setcrawfordjr_21@yahoo.com",
+      "url": "https://github.com/SetCra21"
     },
     {
-      "name": "Contributor2 Name",
-      "email": "contibutor2.email@email.com",
-      "url": "https://github.com/contributor2Username"
+      "name": "James Parker",
+      "email": "jamesparker.us@gmail.com",
+      "url": "https://github.com/JamesWilliamParker"
     },
     {
-      "name": "Contributor3 Name",
-      "email": "contibutor3.email@email.com",
-      "url": "https://github.com/contributor3Username"
+      "name": "Alex Silien",
+      "email": "alexsilien64@gmail.com",
+      "url": "https://github.com/AlexSilien1"
     }
   ],
   "license": "MIT",
